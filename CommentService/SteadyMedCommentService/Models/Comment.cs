@@ -23,5 +23,11 @@ namespace SteadyMedCommentService.Models
 
         //Indicates if read. True is read and false is not
         public bool MessageRead { get; set; }
+
+        //Date the comment was written
+        public DateTime CreatedDate { get; set; }
+
+        //Date the comment was last modified
+        public DateTime ModifiedDate { get; set; }
     }
 }
