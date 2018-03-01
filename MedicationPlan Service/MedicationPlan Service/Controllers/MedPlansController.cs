@@ -18,7 +18,7 @@ namespace MedicationPlan_Service.Controllers
             _plans = plans;
         }
 
-        // GET api/values
+        // GET api/MedPlans
         [HttpGet]
         public IEnumerable<MedicationPlan> Get()
         {
@@ -27,7 +27,7 @@ namespace MedicationPlan_Service.Controllers
             
         }
 
-        // GET api/values/5
+        // GET api/MedPlans/5
         [HttpGet("{id}", Name = "GetPlan")]
         public IActionResult Get(int id)
         {
@@ -36,6 +36,7 @@ namespace MedicationPlan_Service.Controllers
 
             return new ObjectResult(result);
         }
+
 
         // POST api/values
         [HttpPost]
@@ -65,6 +66,8 @@ namespace MedicationPlan_Service.Controllers
             plan.SteadyMedId = value.SteadyMedId;
             plan.HourlyInterval = value.HourlyInterval;            
             plan.PillsPerInterval = value.PillsPerInterval;
+            plan.Completed = value.Completed;
+            
 
             return new NoContentResult();
         }

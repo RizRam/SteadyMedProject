@@ -10,11 +10,13 @@ namespace MedicationPlan_Service.Data
     {
         //Stores all medication plans in memory, ensures that no duplicate medication plans exist
         private Dictionary<int, MedicationPlan> _plans;
+       
 
         //Constructor
         public MedicationPlanCollection()
         {
             _plans = new Dictionary<int, MedicationPlan>();
+
             LoadPlans();  //Load plans into memory
         }
 
@@ -24,15 +26,38 @@ namespace MedicationPlan_Service.Data
             return _plans.GetValueOrDefault(id);
         }
 
+        //Get all plans
         public List<MedicationPlan> GetAllPlans()
         {
             return _plans.Values.ToList<MedicationPlan>();
         }
 
+        //Get all medication plans of a patient
+        public List<MedicationPlan> GetPatientPlans(int patientId)
+        {
+            var plans = (from p in _plans.Values
+                         where p.PatientId == patientId
+                         select p).ToList<MedicationPlan>();
+
+            return plans;
+        }
+
+        //Get most recent uncompleted medication plan of a SteadyMed device
+        public MedicationPlan GetSteadyMedPlan(int SteadyMedId)
+        {
+            var plan = from p in _plans.Values
+                       where p.SteadyMedId == SteadyMedId && !p.Completed
+                       select p;
+
+            return plan.SingleOrDefault();
+        }
+
         //Add Medication Plan to connection
         public bool AddPlan(MedicationPlan plan)
         {
-            return _plans.TryAdd(plan.MedicationPlanId, plan);      
+            bool result = _plans.TryAdd(plan.MedicationPlanId, plan);
+
+            return result;
         }
 
         //Remove Medication Plan using Id
@@ -45,9 +70,48 @@ namespace MedicationPlan_Service.Data
         //Future implementation will load from data from 
         private void LoadPlans()
         {
-            _plans.Add(1, new MedicationPlan { MedicationPlanId = 1, PatientId = 1, PhysicianId = 1, HourlyInterval = 4, PillsPerInterval = 2, SteadyMedId = 1 });
-            _plans.Add(2, new MedicationPlan { MedicationPlanId = 2, PatientId = 2, PhysicianId = 1, HourlyInterval = 8, PillsPerInterval = 1, SteadyMedId = 2 });
-            _plans.Add(3, new MedicationPlan { MedicationPlanId = 3, PatientId = 3, PhysicianId = 2, HourlyInterval = 6, PillsPerInterval = 1, SteadyMedId = 3 });
+            _plans.Add(1, new MedicationPlan
+            {
+                MedicationPlanId = 1,
+                PatientId = 1,
+                PhysicianId = 1,
+                HourlyInterval = 4,
+                PillsPerInterval = 2,
+                SteadyMedId = 1,
+                Completed = false
+            });
+
+            _plans.Add(2, new MedicationPlan
+            {
+                MedicationPlanId = 2,
+                PatientId = 2,
+                PhysicianId = 1,
+                HourlyInterval = 8,
+                PillsPerInterval = 1,
+                SteadyMedId = 2,
+                Completed = false
+            });
+
+            _plans.Add(3, new MedicationPlan
+            {
+                MedicationPlanId = 3,
+                PatientId = 3,
+                PhysicianId = 2,
+                HourlyInterval = 6,
+                PillsPerInterval = 1,
+                SteadyMedId = 3,
+                Completed = true
+            });
+
+            _plans.Add(4, new MedicationPlan
+            {
+                MedicationPlanId = 4,
+                PatientId = 3,
+                HourlyInterval = 4,
+                PillsPerInterval = 10,
+                SteadyMedId = 3,
+                Completed = false
+            });
         }
 
     }

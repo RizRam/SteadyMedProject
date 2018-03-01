@@ -13,5 +13,6 @@ namespace MedicationPlan_Service.Models
         public int SteadyMedId { get; set; }
         public int HourlyInterval { get; set; }
         public int PillsPerInterval { get; set; }
+	    public bool Completed { get; set; }
     }
 }
