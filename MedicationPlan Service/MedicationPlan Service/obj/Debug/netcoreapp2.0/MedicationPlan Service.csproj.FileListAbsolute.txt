@@ -1,0 +1,11 @@
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.deps.json
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.runtimeconfig.json
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.runtimeconfig.dev.json
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.dll
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.pdb
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.csprojResolveAssemblyReference.cache
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.csproj.CoreCompileInputs.cache
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.AssemblyInfoInputs.cache
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.AssemblyInfo.cs
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.dll
+C:\Users\RizMac\Desktop\CSS 553\Project\Medication Plan Service\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.pdb
