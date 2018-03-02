@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="physician_panel">
+  <div id="patient_info">
+    <h3>patient name</h3>
+    <ul id="med_list">
+      <li><a href="bottle_detail">med 1</a></li>
+      <li><a href="bottle_detail">med 2</a></li>
+      <li><a href="bottle_detail">med 3</a></li>
+    </ul>
+  </div>
+</div>
+<div id="debug_panel">
+  <h3 id="debug_result"></h3>
+</div>
+<script>
+$(document).ready(function () {
+  $('#debug_result').html("Retrieving data...");
+
+  $.ajax({
+    type: "GET",
+    dataType: "text",
+    cache: false,
+    url: "https://api.github.com/users/rzaracota/repos",
+    success: function (xml) {
+      $('#debug_result').html("<pre>" + xml + "</pre>");
+
+      var repos = JSON.parse(xml);
+
+      var list = "<ul>\n";
+
+      for (repo in repos) {
+        list += "<li>" + repos[repo].name + "</li>";
+      }
+
+      list += "</ul>";
+
+      $('#med_list').html(list);
+    },
+    error: function (xml) {
+      alert("Error" + xml);
+    }
+  });
+});
+</script>
+</body>
+</html>
