@@ -72,9 +72,10 @@ namespace MedicationPlan_Service.Data
         {
             _plans.Add(1, new MedicationPlan
             {
-                MedicationPlanId = 1,
+                MedicationPlanId = 1,                
                 PatientId = 1,
-                PhysicianId = 1,
+                PhysicianId = 2,
+                Medication = "Tylenol",
                 HourlyInterval = 4,
                 PillsPerInterval = 2,
                 SteadyMedId = 1,
@@ -84,8 +85,9 @@ namespace MedicationPlan_Service.Data
             _plans.Add(2, new MedicationPlan
             {
                 MedicationPlanId = 2,
-                PatientId = 2,
-                PhysicianId = 1,
+                PatientId = 3,
+                PhysicianId = 4,
+                Medication = "Codeine",
                 HourlyInterval = 8,
                 PillsPerInterval = 1,
                 SteadyMedId = 2,
@@ -95,8 +97,9 @@ namespace MedicationPlan_Service.Data
             _plans.Add(3, new MedicationPlan
             {
                 MedicationPlanId = 3,
-                PatientId = 3,
-                PhysicianId = 2,
+                PatientId = 5,
+                PhysicianId = 6,
+                Medication = "Robitussin",
                 HourlyInterval = 6,
                 PillsPerInterval = 1,
                 SteadyMedId = 3,
@@ -106,8 +109,10 @@ namespace MedicationPlan_Service.Data
             _plans.Add(4, new MedicationPlan
             {
                 MedicationPlanId = 4,
-                PatientId = 3,
-                HourlyInterval = 4,
+                PatientId = 7,
+                PhysicianId = 6,
+                Medication = "Aspirin",
+                HourlyInterval = 6,
                 PillsPerInterval = 10,
                 SteadyMedId = 3,
                 Completed = false

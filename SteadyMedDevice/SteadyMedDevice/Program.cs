@@ -10,8 +10,9 @@ namespace SteadyMedDevice
     {
         private static int STEADY_MED_ID = 2;
         private static string STEADYMED_SERVICE_BASEURL = "http://localhost:50151"; 
-
         static HttpClient client = new HttpClient();
+
+
         static MedicationPlan currentPlan;
 
         static void Main(string[] args)
@@ -30,33 +31,34 @@ namespace SteadyMedDevice
                 }
 
                 System.Threading.Thread.Sleep(10000);
-                Console.WriteLine("Loop");
+                
                 
             }
         }
 
         static async Task RunAsync()
         {
-            //Set up Http Client
-            Uri steadyMedServiceUri = new Uri(STEADYMED_SERVICE_BASEURL);
-            client.BaseAddress = steadyMedServiceUri;
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
             //Get current Plan
-            currentPlan = await GetMedicationPlan(steadyMedServiceUri.OriginalString + $"/api/SteadyMedPlans/{STEADY_MED_ID}");   
+            currentPlan = await GetMedicationPlan(STEADYMED_SERVICE_BASEURL + $"/api/SteadyMedPlans/{STEADY_MED_ID}");   
 
             //Display current plan
             if (currentPlan != null)
             {
                 Console.WriteLine($"{currentPlan.Medication}: {currentPlan.PillsPerInterval} pills every {currentPlan.HourlyInterval} hours.");
             }
+            else
+            {
+                Console.WriteLine("No medication plan has been set");
+            }
+
+            //Check for Outside Requests
 
         }
 
         static async Task<MedicationPlan> GetMedicationPlan(string path)
-        {
+        { 
+            var request = new HttpRequestMessage(HttpMethod.Get, STEADYMED_SERVICE_BASEURL + $"/api/SteadyMedPlans/{STEADY_MED_ID}");
+
             MedicationPlan plan = null;
             HttpResponseMessage response = await client.GetAsync(path);
             if (response.IsSuccessStatusCode)

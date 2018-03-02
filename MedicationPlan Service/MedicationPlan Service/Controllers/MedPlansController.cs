@@ -22,7 +22,6 @@ namespace MedicationPlan_Service.Controllers
         [HttpGet]
         public IEnumerable<MedicationPlan> Get()
         {
-            //return new string[] { "value1", "value2" };
             return _plans.GetAllPlans();
             
         }
@@ -36,7 +35,6 @@ namespace MedicationPlan_Service.Controllers
 
             return new ObjectResult(result);
         }
-
 
         // POST api/values
         [HttpPost]
