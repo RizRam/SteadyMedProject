@@ -8,6 +8,12 @@
 </head>
 <body>
 <div id="physician_panel">
+  <div id="physician_search_form">
+    <form>
+      <input id="search_box" type="text" name="search_text" />
+      <input id="search_button" type="button" value="Search" />
+    </form>
+  </div>
   <div id="patient_info">
     <h3>patient name</h3>
     <ul id="med_list">
@@ -21,7 +27,46 @@
   <h3 id="debug_result"></h3>
 </div>
 <script>
+function searchClick() {
+    var text = $('#search_box').val();
+
+    $.ajax({
+    type: "GET",
+    dataType: "text",
+    cache: false,
+    url: "https://api.github.com/users/rzaracota/repos",
+    success: function (xml) {
+      $('#debug_result').html("<pre>" + xml + "</pre>");
+
+      var repos = JSON.parse(xml);
+
+      var list = "<ul>\n";
+
+      for (repo in repos) {
+        if (text == "" || repos[repo].name.toLowerCase().indexOf(text.toLowerCase()) != -1) {
+          list += "<li>" + repos[repo].name + "</li>";
+        }
+      }
+
+      list += "</ul>";
+
+      $('#med_list').html(list);
+    },
+    error: function (xml) {
+      alert("Error" + xml);
+    }
+  });
+}
+
 $(document).ready(function () {
+  $('#search_button').on("click", searchClick);
+  $(document).keypress(function (e) {
+    if (e.which == 13) {
+      // enter
+      searchClick();
+    }
+  })
+
   $('#debug_result').html("Retrieving data...");
 
   $.ajax({
