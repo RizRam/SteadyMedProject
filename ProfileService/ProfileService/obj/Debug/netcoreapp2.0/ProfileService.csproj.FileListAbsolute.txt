@@ -1,0 +1,11 @@
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.deps.json
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.runtimeconfig.json
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.runtimeconfig.dev.json
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.dll
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.csprojResolveAssemblyReference.cache
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.csproj.CoreCompileInputs.cache
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.AssemblyInfoInputs.cache
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.AssemblyInfo.cs
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.pdb
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.dll
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.pdb

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace MedicationPlan_Service.Models
+namespace SteadyMedDevice
 {
-    public class MedicationPlan
+    class MedicationPlan
     {
         public int MedicationPlanId { get; set; }
         public int PatientId { get; set; }
@@ -14,6 +13,6 @@ namespace MedicationPlan_Service.Models
         public string Medication { get; set; }
         public int HourlyInterval { get; set; }
         public int PillsPerInterval { get; set; }
-	    public bool Completed { get; set; }
+        public bool Completed { get; set; }
     }
 }

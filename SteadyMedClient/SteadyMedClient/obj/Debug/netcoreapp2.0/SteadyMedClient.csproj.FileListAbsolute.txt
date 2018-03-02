@@ -1,0 +1,11 @@
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\bin\Debug\netcoreapp2.0\SteadyMedClient.deps.json
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\bin\Debug\netcoreapp2.0\SteadyMedClient.runtimeconfig.json
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\bin\Debug\netcoreapp2.0\SteadyMedClient.runtimeconfig.dev.json
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\bin\Debug\netcoreapp2.0\SteadyMedClient.dll
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\bin\Debug\netcoreapp2.0\SteadyMedClient.pdb
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.csprojResolveAssemblyReference.cache
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.csproj.CoreCompileInputs.cache
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.AssemblyInfoInputs.cache
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.AssemblyInfo.cs
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.dll
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.pdb
