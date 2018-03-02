@@ -35,7 +35,7 @@ namespace MedicationPlan_Service
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
