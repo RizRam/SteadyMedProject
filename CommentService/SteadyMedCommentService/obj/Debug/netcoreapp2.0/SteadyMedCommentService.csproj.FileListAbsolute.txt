@@ -1,0 +1,22 @@
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.deps.json
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.runtimeconfig.json
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.runtimeconfig.dev.json
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.dll
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.pdb
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.csprojResolveAssemblyReference.cache
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.csproj.CoreCompileInputs.cache
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.AssemblyInfoInputs.cache
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.AssemblyInfo.cs
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.dll
+C:\Users\Craig Rainey\Documents\Visual Studio 2017\Projects\SteadyMedCommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.deps.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.runtimeconfig.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.runtimeconfig.dev.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\bin\Debug\netcoreapp2.0\SteadyMedCommentService.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.csprojResolveAssemblyReference.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.csproj.CoreCompileInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.AssemblyInfoInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.AssemblyInfo.cs
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\CommentService\SteadyMedCommentService\obj\Debug\netcoreapp2.0\SteadyMedCommentService.pdb
