@@ -1,8 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model SteadyMedClient.Models.PhysicianViewModel;
 
 <div id="physician_panel">
     <div id="physician_search_form">
@@ -12,6 +8,13 @@
         </form>
     </div>
     <div id="patient_info">
+        <table>
+
+            @foreach (var patient in Model.patients)
+            {
+                <tr><td>@patient.ID</td><td>@patient.Name</td></tr>
+            }
+        </table>
     </div>
 </div>
 <div id="debug_panel">

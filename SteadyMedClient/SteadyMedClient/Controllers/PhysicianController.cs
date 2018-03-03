@@ -14,20 +14,15 @@ namespace SteadyMedClient.Controllers
     {
         private HttpClient httpClient;
 
-        PhysicianController(HttpClient client)
+        public PhysicianController(HttpClient client)
         {
             httpClient = client;
         }  
 
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
-        }
-
-        [HttpGet]
-        public PhysicianViewModel patients()
-        {
-            var patients = new List<ServicePatient>()
+            IEnumerable<ServicePatient> patients = new List<ServicePatient>
             {
                 new ServicePatient()
                 {
@@ -53,7 +48,7 @@ namespace SteadyMedClient.Controllers
 
             //patients = serializer.ReadObject(stream.Result) as List<ServicePatient>;
 
-            return new PhysicianViewModel(patients);
+            return View(new PhysicianViewModel(patients));
         }
     }
 }

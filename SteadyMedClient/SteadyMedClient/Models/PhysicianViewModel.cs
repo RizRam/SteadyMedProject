@@ -18,6 +18,6 @@ namespace SteadyMedClient.Models
             this.patients = patients;
         }
 
-        IEnumerable<ServicePatient> patients { get; set; }
+        public IEnumerable<ServicePatient> patients { get; set; }
     }
 }
