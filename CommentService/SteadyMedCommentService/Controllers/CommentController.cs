@@ -23,6 +23,7 @@ namespace SteadyMedCommentService.Controllers
             if (_context.Comments.Count() == 0)
             {
                 _context.Comments.Add(new Comment { CommentId = 111, MedicationPlanId = 333, AuthorId = 777, CommentSection = "This is a test", MessageRead = false, CreatedDate = DateTime.Now });
+                _context.Comments.Add(new Comment { CommentId = 222, MedicationPlanId = 333, AuthorId = 777, CommentSection = "This is a test 2", MessageRead = false, CreatedDate = DateTime.Now });
                 _context.SaveChanges();
             }
         }
@@ -63,23 +64,16 @@ namespace SteadyMedCommentService.Controllers
             return new NoContentResult();
         }
 
-        //Retrieve a comment
-        [HttpGet("{id}", Name = "GetComment")]
-        public IActionResult GetComment(int Id)
-        {
-            Comment comment = _context.Comments.FirstOrDefault(c => c.CommentId == Id);
-            if (comment == null)
-            {
-                return NotFound();
-            }
-            return new ObjectResult(comment);
-        }
-
         //Retrieve All comments related to a medication plan
         [HttpGet("{id}", Name = "GetMedicationPlanComments")]
         public IActionResult GetMedicationPlanComments(int id)
         {
-            return new ObjectResult(from c in _context.Comments where c.MedicationPlanId == id select c);
+            var comments = from c in _context.Comments where c.MedicationPlanId == id select c;
+            if (comments == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(comments);
         }
 
         //Delete a comment
