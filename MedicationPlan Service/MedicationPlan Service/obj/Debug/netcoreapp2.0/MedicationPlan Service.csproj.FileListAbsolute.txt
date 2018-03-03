@@ -20,3 +20,14 @@ C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\MedicationPlan Service\Medicatio
 C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.runtimeconfig.dev.json
 C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.dll
 C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.deps.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.runtimeconfig.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.runtimeconfig.dev.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\bin\Debug\netcoreapp2.0\MedicationPlan Service.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.csprojResolveAssemblyReference.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.csproj.CoreCompileInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.AssemblyInfoInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.AssemblyInfo.cs
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\MedicationPlan Service\MedicationPlan Service\obj\Debug\netcoreapp2.0\MedicationPlan Service.pdb
