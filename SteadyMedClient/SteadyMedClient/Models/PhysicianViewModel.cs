@@ -13,6 +13,11 @@ namespace SteadyMedClient.Models
 
     public class PhysicianViewModel
     {
+        public PhysicianViewModel(IEnumerable<ServicePatient> patients)
+        {
+            this.patients = patients;
+        }
+
         IEnumerable<ServicePatient> patients { get; set; }
     }
 }
