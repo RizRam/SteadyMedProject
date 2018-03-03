@@ -4,23 +4,39 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SteadyMedClient.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace SteadyMedClient.Controllers
 {
     public class PatientController : Controller
     {
+        /*
+        private readonly UserManager<User> _userManager;
+
+        public PatientController(UserManager<User> userManager)
+        {
+            _userManager = userManager;
+        }
+        */
+
         public IActionResult Index()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Details(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
 
             PatientViewModel model = new PatientViewModel();
 
+            //var currentUser = await _userManager.GetUserAsync(User) as Physician;
+
+            Physician currentPhysician = new Physician();
+            currentPhysician.UserId = 3;
+            currentPhysician.Name = "Doctor McDoctor";
+            
             Patient temp = new Patient();
 
             temp.UserId = 2;
@@ -39,6 +55,7 @@ namespace SteadyMedClient.Controllers
                 Completed = false
             });
 
+            model.CurrentPhysician = currentPhysician;
             model.Patient = temp;
             model.NewMedPlan = new MedicationPlan();
 
@@ -46,9 +63,25 @@ namespace SteadyMedClient.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateMedicationPlan(Patient patient)
+        public async Task<IActionResult> CreateMedicationPlan(PatientViewModel model)
         {
-            return NotFound();
+            if (model == null) return View(model);
+
+            MedicationPlan plan = new MedicationPlan();
+            plan.PhysicianId = model.CurrentPhysician.UserId;
+            plan.PatientId = model.Patient.UserId;
+            plan.Patient = model.Patient;
+            plan.Medication = model.NewMedPlan.Medication;
+            plan.SteadyMedId = model.Patient.SteadyMedsOwned.FirstOrDefault();
+            plan.HourlyInterval = model.NewMedPlan.HourlyInterval;
+            plan.PillsPerInterval = model.NewMedPlan.PillsPerInterval;
+
+            //Add plan to database/service
+
+            
+
+            return RedirectToAction("Details", new { id = model.Patient.UserId });
+
         }
 
     }

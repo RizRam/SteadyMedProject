@@ -54,10 +54,13 @@
 
 </div>
 
-<div class="btn-group">
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popupModal">Create Plan</button>
-    <a class="btn btn-info" href="javascript:history.go(-1)">Back</a>
-</div>
+@if (Model.CurrentPhysician != null)
+{
+    <div class="btn-group">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popupModal">Create Plan</button>
+    </div>
+}
+
 
 <!--  Modal Popup Dialog-->
 
@@ -70,9 +73,20 @@
                 <div>
                     <form asp-action="CreateMedicatonPlan">
                         <div class=" form-group">
-                            <label asp-for="model.NewMedPlan.Medication" class="col-md-2 control-label"></label>
+                            <label asp-for="model.NewMedPlan.Medication" class="col-md-2 control-label">Medication</label>
                             <div class="col-md-10">
                                 <input asp-for="model.NewMedPlan.Medication" class="form-control" />
+                            </div>
+                            <label asp-for="model.NewMedPlan.HourlyInterval" class="col-md-2 control-label">Hourly Interval</label>
+                            <div class="col-md-10">
+                                <input asp-for="model.NewMedPlan.HourlyInterval" class="form-control" />
+                            </div>
+                            <label asp-for="model.NewMedPlan.PillsPerInterval" class="col-md-2 control-label">Pills Per Interval</label>
+                            <div class="col-md-10">
+                                <input asp-for="model.NewMedPlan.PillsPerInterval" class="form-control" />
+                            </div>
+                            <div>
+                                <input type="submit" value="Save" class="btn btn-success" />
                             </div>
                         </div>
                     </form>

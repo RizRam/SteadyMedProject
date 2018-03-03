@@ -7,6 +7,7 @@ namespace SteadyMedClient.Models
 {
     public class PatientViewModel
     {
+        public Physician CurrentPhysician {get; set;}
         public Patient Patient { get; set; }
         public MedicationPlan NewMedPlan {get; set;}
 
