@@ -1,0 +1,85 @@
+﻿@model SteadyMedClient.Models.PatientViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Html.DisplayFor(model => model.Patient.Name)</h2>
+
+<div>
+    <table class="table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient.Plans.FirstOrDefault().Medication)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient.Plans.FirstOrDefault().HourlyInterval)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient.Plans.FirstOrDefault().PillsPerInterval)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient.Plans.FirstOrDefault().SteadyMedId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patient.Plans.FirstOrDefault().Completed)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var plan in Model.Patient.Plans)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => plan.Medication)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => plan.HourlyInterval)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => plan.PillsPerInterval)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => plan.SteadyMedId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => plan.Completed)
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popupModal">Create Plan</button>
+    <a class="btn btn-info" href="javascript:history.go(-1)">Back</a>
+</div>
+
+<!--  Modal Popup Dialog-->
+
+<div class="modal fade" id="popupModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3>Create Plan</h3>
+                <div>
+                    <form asp-action="CreateMedicatonPlan">
+                        <div class=" form-group">
+                            <label asp-for="model.NewMedPlan.Medication" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <input asp-for="model.NewMedPlan.Medication" class="form-control" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -28,6 +28,7 @@ namespace SteadyMedClient
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+           
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
@@ -40,7 +41,7 @@ namespace SteadyMedClient
 
             app.UseStaticFiles();
 
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

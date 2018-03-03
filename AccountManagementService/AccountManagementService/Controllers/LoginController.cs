@@ -19,7 +19,7 @@ namespace AccountManagementService.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login([FromBody] string userName, string password)
+        public IActionResult Login(string userName, string password)
         {
             if (userName == null || password == null) return BadRequest();
 

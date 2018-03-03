@@ -27,15 +27,20 @@ namespace ProfileService.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Profile Get(int id)
         {
-            return "value";
+            return _collection.GetProfile(id);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]Profile value)
         {
+            if (value == null) return BadRequest();
+
+            if (_collection.AddProfile(value)) return CreatedAtRoute($"/api/[controller]/{value.UserID}", value);
+
+            return BadRequest();
 
         }
 

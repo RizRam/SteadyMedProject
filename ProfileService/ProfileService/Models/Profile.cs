@@ -16,6 +16,6 @@ namespace ProfileService.Models
 
         public int UserID { get; set; }
         public string Name { get; set; }
-        public HashSet<Account> Patients { get { return _patients; }; set { _patients = value; } }
+        public HashSet<Account> Patients { get { return _patients; } set { _patients = value; } }
     }
 }
