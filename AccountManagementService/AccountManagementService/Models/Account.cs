@@ -9,25 +9,24 @@ namespace AccountManagementService.Models
     {
         public enum AccountType
         {
-            patient,
-            caretaker,
-            physican
+            patient = 1,
+            caretaker = 2,
+            physican = 4
         }
 
         private HashSet<int> _steadyMedsOwned;
-        private HashSet<int> _patientList;
 
        public Account()
         {
             _steadyMedsOwned = new HashSet<int>();
-            _patientList = new HashSet<int>();
         }
 
         public int AccountId { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
         public string Name { get; set; }
         public AccountType AccountPrivilege { get; set; }
         public HashSet<int> SteadyMedsOwned { get { return _steadyMedsOwned; } set { _steadyMedsOwned = value; }  }
-        public HashSet<int> PatientList { get { return _patientList; } set { _patientList = value; } }
 
     }
 }

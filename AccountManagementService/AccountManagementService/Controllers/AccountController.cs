@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.JsonPatch;
 
 namespace AccountManagementService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     public class AccountController : Controller
     {
         private readonly AccountCollection _collection;
@@ -17,6 +17,12 @@ namespace AccountManagementService.Controllers
         public AccountController(AccountCollection collection)
         {
             _collection = collection;
+        }
+
+        [HttpGet]
+        public IEnumerable<Account> Index()
+        {
+            return _collection.GetAll();
         }
 
         // GET api/values/5
@@ -46,9 +52,11 @@ namespace AccountManagementService.Controllers
             Account account = _collection.GetAccount(id);
             if (account == null) return NotFound();
 
+            account.UserName = value.UserName;
+            account.AccountId = value.AccountId;
+            account.Password = value.Password;
             account.AccountPrivilege = value.AccountPrivilege;
             account.Name = value.Name;
-            account.PatientList = value.PatientList;
             account.SteadyMedsOwned = value.SteadyMedsOwned;
 
 
