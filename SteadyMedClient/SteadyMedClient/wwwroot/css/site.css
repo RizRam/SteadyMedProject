@@ -21,6 +21,13 @@ body {
     width: 100%;
 }
 
+.patient_info {
+    margin: auto;
+    width: 50%;
+    border: 4px solid black;
+    padding: 10px;
+}
+
 /* QR code generator */
 #qrCode {
     margin: 15px;

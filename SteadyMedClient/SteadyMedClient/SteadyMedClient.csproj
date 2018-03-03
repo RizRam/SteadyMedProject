@@ -11,6 +11,5 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\ViewModels\" />
-    <Folder Include="Views\Physician\" />
   </ItemGroup>
 </Project>

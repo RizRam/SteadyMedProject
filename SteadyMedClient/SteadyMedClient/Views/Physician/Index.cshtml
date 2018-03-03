@@ -1,18 +1,28 @@
 ﻿@model SteadyMedClient.Models.PhysicianViewModel;
 
-<div id="physician_panel">
+<style>
+    
+    .patient_info {
+        margin: auto;
+        width: 50%;
+        border: 4px solid black;
+        padding: 10px;
+    }
+</style>
+
+<div class="container-fluid" id="physician_panel">
     <div id="physician_search_form">
         <form>
             <input id="search_box" type="text" name="search_text" />
             <input id="search_button" type="button" value="Search" />
         </form>
     </div>
-    <div id="patient_info">
-        <table>
+    <div class="patient_info" id="patient_info_section">
+        <table class="col-md-12">
 
             @foreach (var patient in Model.patients)
             {
-                <tr><td>@patient.ID</td><td>@patient.Name</td></tr>
+                <tr class="row patient_card justify-content-center"><td>@Html.ActionLink(@patient.Name, "Index", "physician")</td><td>@patient.ID</td></tr>
             }
         </table>
     </div>
@@ -20,4 +30,16 @@
 <div id="debug_panel">
     <h3 id="debug_result"></h3>
 </div>
+
+<script>
+    function patientCardClick(patientName) {
+
+
+    }
+
+    $(document).ready(function () {
+        $('.')
+
+    });
+</script>
    

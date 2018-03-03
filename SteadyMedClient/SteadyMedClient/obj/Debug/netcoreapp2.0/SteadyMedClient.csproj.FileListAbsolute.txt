@@ -14,9 +14,9 @@ C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\bin
 C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\bin\Debug\netcoreapp2.0\SteadyMedClient.runtimeconfig.dev.json
 C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\bin\Debug\netcoreapp2.0\SteadyMedClient.dll
 C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\bin\Debug\netcoreapp2.0\SteadyMedClient.pdb
-C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.csprojResolveAssemblyReference.cache
 C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.csproj.CoreCompileInputs.cache
 C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.AssemblyInfoInputs.cache
 C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.AssemblyInfo.cs
 C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.dll
 C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.pdb
+C:\Users\greyg\source\repos\SteadyMedProject\SteadyMedClient\SteadyMedClient\obj\Debug\netcoreapp2.0\SteadyMedClient.csprojResolveAssemblyReference.cache

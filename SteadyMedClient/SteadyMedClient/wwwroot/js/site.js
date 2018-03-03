@@ -30,6 +30,16 @@ function searchClick() {
   });
 }
 
+function searchPatients() {
+    var text = $('#search_box').val();
+
+    var patients = $('patient_card')
+
+    for (e in patients) {
+        if (patients.)
+    }
+}
+
 function createPatientList(xml) {
     var repos = JSON.parse(xml);
 
