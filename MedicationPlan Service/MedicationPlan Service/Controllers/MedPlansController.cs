@@ -18,16 +18,15 @@ namespace MedicationPlan_Service.Controllers
             _plans = plans;
         }
 
-        // GET api/values
+        // GET api/MedPlans
         [HttpGet]
         public IEnumerable<MedicationPlan> Get()
         {
-            //return new string[] { "value1", "value2" };
             return _plans.GetAllPlans();
             
         }
 
-        // GET api/values/5
+        // GET api/MedPlans/5
         [HttpGet("{id}", Name = "GetPlan")]
         public IActionResult Get(int id)
         {
@@ -65,6 +64,8 @@ namespace MedicationPlan_Service.Controllers
             plan.SteadyMedId = value.SteadyMedId;
             plan.HourlyInterval = value.HourlyInterval;            
             plan.PillsPerInterval = value.PillsPerInterval;
+            plan.Completed = value.Completed;
+            
 
             return new NoContentResult();
         }

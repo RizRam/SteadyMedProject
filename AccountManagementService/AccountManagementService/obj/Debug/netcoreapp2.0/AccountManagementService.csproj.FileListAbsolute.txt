@@ -1,0 +1,11 @@
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.deps.json
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.runtimeconfig.json
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.runtimeconfig.dev.json
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.dll
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.csprojResolveAssemblyReference.cache
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.csproj.CoreCompileInputs.cache
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.AssemblyInfoInputs.cache
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.AssemblyInfo.cs
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.pdb
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.dll
+C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.pdb
