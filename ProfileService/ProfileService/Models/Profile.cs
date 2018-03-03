@@ -7,9 +7,15 @@ namespace ProfileService.Models
 {
     public class Profile
     {
+        HashSet<Account> _patients;
+
+        public Profile()
+        {
+            _patients = new HashSet<Account>();
+        }
+
         public int UserID { get; set; }
         public string Name { get; set; }
-        public HashSet<int> SteadyMedsOwned { get; set; }
-        public HashSet<int> Patients { get; set; }
+        public HashSet<Account> Patients { get { return _patients; }; set { _patients = value; } }
     }
 }
