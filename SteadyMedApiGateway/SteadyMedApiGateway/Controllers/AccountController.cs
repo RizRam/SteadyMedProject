@@ -65,7 +65,7 @@ namespace SteadyMedApiGateway.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToAction("Index", "MedicationPlan", new { medicationPlanId = 1 });
+                    return RedirectToAction("Index", "Physician");
                 }
                 if (result.RequiresTwoFactor)
                 {

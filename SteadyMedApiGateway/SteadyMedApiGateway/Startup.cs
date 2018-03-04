@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SteadyMedApiGateway.Data;
 using SteadyMedApiGateway.Models;
 using SteadyMedApiGateway.Services;
+using System.Net.Http;
 
 namespace SteadyMedApiGateway
 {
@@ -35,6 +36,8 @@ namespace SteadyMedApiGateway
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+
+            services.AddSingleton<HttpClient>();
 
             services.AddMvc();
         }

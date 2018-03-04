@@ -22,8 +22,7 @@ namespace SteadyMedApiGateway.Controllers
             if (response.IsSuccessStatusCode)
             {
                 var responseBody = await response.Content.ReadAsStringAsync();
-                MedicationPlan medicationPlan = JsonConvert.DeserializeObject<MedicationPlan>(responseBody);
-                Debug.WriteLine("Medication Patient ID: " + medicationPlan.PatientId);
+                PatientMedicationPlan medicationPlan = JsonConvert.DeserializeObject<PatientMedicationPlan>(responseBody);
                 return View(medicationPlan);
             }
             return View();

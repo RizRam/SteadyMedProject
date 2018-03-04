@@ -1,0 +1,27 @@
+﻿@model SteadyMedApiGateway.Models.PhysicianViewModels.PhysicianViewModel
+
+<div id="physician_panel" class="container-fluid">
+    <div class="row" id="physician_search_form">
+        <form>
+            <input id="search_box" type="text" name="search_text" />
+            <input type="button" class="btn btn-default" id="search_button" value="Search" />
+        </form>
+    </div>
+    <div class="patient_info" id="patient_info_section">
+        <table>
+            <thead>
+                <tr class="row justify-content-center">
+                    <th class="col-md-4">ID</th>
+                    <th class="col-md-8">Name</th>
+                </tr>
+            </thead>
+            @foreach (var patient in Model.Patients)
+            {
+                <tr class="row patient_card justify-content-center"><td class="col-md-4">@patient.ID</td><td class="col-md-8">@Html.ActionLink(@patient.PatientFirstName, "Index", "physician")</td></tr>
+            }
+        </table>
+    </div>
+</div>
+<div id="debug_panel">
+    <h3 id="debug_result"></h3>
+</div>
