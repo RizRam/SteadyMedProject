@@ -1,5 +1,6 @@
-﻿@model SteadyMedClient.Models.PhysicianViewModel
+﻿
 
+@model SteadyMedClient.Models.PhysicianViewModel
 <!--<style>
     .patient_info {
         margin: auto;
@@ -20,7 +21,8 @@
         <table>
             <thead>
                 <tr class="row justify-content-center">
-                    <th class="col-md-4">ID</th><th class="col-md-8">Name</th>
+                    <th class="col-md-4">ID</th>
+                    <th class="col-md-8">Name</th>
                 </tr>
             </thead>
             @foreach (var patient in Model.patients)
@@ -34,4 +36,3 @@
     <h3 id="debug_result"></h3>
 </div>
 
-   
