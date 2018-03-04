@@ -1,28 +1,31 @@
-﻿@model SteadyMedClient.Models.PhysicianViewModel;
+﻿@model SteadyMedClient.Models.PhysicianViewModel
 
-<style>
-    
+<!--<style>
     .patient_info {
         margin: auto;
         width: 50%;
         border: 4px solid black;
         padding: 10px;
     }
-</style>
+</style>-->
 
-<div class="container-fluid" id="physician_panel">
-    <div id="physician_search_form">
+<div id="physician_panel" class="container-fluid">
+    <div class="row" id="physician_search_form">
         <form>
             <input id="search_box" type="text" name="search_text" />
-            <input id="search_button" type="button" value="Search" />
+            <input type="button" class="btn btn-default" id="search_button" value="Search" />
         </form>
     </div>
     <div class="patient_info" id="patient_info_section">
-        <table class="col-md-12">
-
+        <table>
+            <thead>
+                <tr class="row justify-content-center">
+                    <th class="col-md-4">ID</th><th class="col-md-8">Name</th>
+                </tr>
+            </thead>
             @foreach (var patient in Model.patients)
             {
-                <tr class="row patient_card justify-content-center"><td>@Html.ActionLink(@patient.Name, "Index", "physician")</td><td>@patient.ID</td></tr>
+                <tr class="row patient_card justify-content-center"><td class="col-md-4">@patient.ID</td><td class="col-md-8">@Html.ActionLink(@patient.Name, "Index", "physician")</td></tr>
             }
         </table>
     </div>
@@ -31,15 +34,4 @@
     <h3 id="debug_result"></h3>
 </div>
 
-<script>
-    function patientCardClick(patientName) {
-
-
-    }
-
-    $(document).ready(function () {
-        $('.')
-
-    });
-</script>
    
