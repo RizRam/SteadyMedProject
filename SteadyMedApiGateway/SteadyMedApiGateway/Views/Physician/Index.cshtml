@@ -1,5 +1,9 @@
 ﻿@model SteadyMedApiGateway.Models.PhysicianViewModels.PhysicianViewModel
 
+@{
+    ViewData["Title"] = "Physicians Home";
+}
+
 <div id="physician_panel" class="container-fluid">
     <div class="row" id="physician_search_form">
         <form>
@@ -7,20 +11,38 @@
             <input type="button" class="btn btn-default" id="search_button" value="Search" />
         </form>
     </div>
-    <div class="patient_info" id="patient_info_section">
-        <table>
-            <thead>
-                <tr class="row justify-content-center">
-                    <th class="col-md-4">ID</th>
-                    <th class="col-md-8">Name</th>
-                </tr>
-            </thead>
+    <h4>Patients</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patients.First().ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patients.First().PatientFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Patients.First().PatientLastName)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
             @foreach (var patient in Model.Patients)
             {
-                <tr class="row patient_card justify-content-center"><td class="col-md-4">@patient.ID</td><td class="col-md-8">@Html.ActionLink(@patient.PatientFirstName, "Index", "physician")</td></tr>
+                <tr class="patientRow" onclick="location.href='@Url.Action("Index", "Physician")'">
+                    <td>
+                        @patient.ID
+                    </td>
+                    <td>
+                        @patient.PatientFirstName
+                    </td>
+                    <td>
+                        @patient.PatientLastName
+                    </td>
+                </tr>
             }
-        </table>
-    </div>
+        </tbody>
+    </table>
 </div>
 <div id="debug_panel">
     <h3 id="debug_result"></h3>

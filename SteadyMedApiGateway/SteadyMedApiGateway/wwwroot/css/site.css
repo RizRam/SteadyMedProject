@@ -33,3 +33,7 @@
         display: none;
     }
 }
+
+.patientRow:hover {
+    background-color: lightgray;
+}
