@@ -85,8 +85,12 @@
                             <div class="col-md-10">
                                 <input asp-for="model.NewMedPlan.PillsPerInterval" class="form-control" />
                             </div>
+                            <label asp-for="model.NewMedPlan.SteadyMedId" class="col-md-2 control-label">Steady Med Canister</label>
+                            <div class="col-md-10">
+                                <input asp-for="model.NewMedPlan.SteadyMedId" class="form-control" />
+                            </div>
                             <div>
-                                <input type="submit" value="Save" class="btn btn-success" />
+                                <input type="submit" value="Create" class="btn btn-success" />
                             </div>
                         </div>
                     </form>
