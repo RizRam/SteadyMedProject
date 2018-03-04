@@ -9,7 +9,7 @@ using AccountManagementService.Data;
 namespace AccountManagementService.Controllers
 {
 
-    [Route("/api/[controller/")]
+    [Route("/api/[controller]/")]
     public class VerificationController : Controller
     {
 

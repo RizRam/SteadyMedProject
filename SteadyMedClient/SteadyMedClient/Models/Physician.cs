@@ -10,5 +10,8 @@ namespace SteadyMedClient.Models
         public HashSet<int> SteadyMedsOwned { get; set; }
         public HashSet<Patient> Patients { get; set; }
         public SortedSet<MedicationPlan> Plans { get; set; }
+
+
+
     }
 }
