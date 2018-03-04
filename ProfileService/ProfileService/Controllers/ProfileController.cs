@@ -3,30 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ProfileService.Models;
+using ProfileService.Data;
 
 namespace ProfileService.Controllers
 {
     [Route("api/[controller]")]
     public class ProfileController : Controller
     {
+        private readonly ProfileCollection _collection;
+
+        public ProfileController(ProfileCollection collection)
+        {
+            _collection = collection;
+        }
+
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Profile> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _collection.GetAll();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Profile Get(int id)
         {
-            return "value";
+            return _collection.GetProfile(id);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]Profile value)
         {
+            if (value == null) return BadRequest();
+
+            if (_collection.AddProfile(value)) return CreatedAtRoute($"/api/[controller]/{value.UserID}", value);
+
+            return BadRequest();
+
         }
 
         // PUT api/values/5

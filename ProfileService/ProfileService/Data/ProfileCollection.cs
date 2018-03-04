@@ -18,11 +18,32 @@ namespace ProfileService.Data
             LoadCollection();
         }
 
+        public IEnumerable<Profile> GetAll()
+        {
+            return _collection.Values;
+        }
 
+        public Profile GetProfile(int id)
+        {
+            return _collection.GetValueOrDefault(id);
+        }
+
+        public bool AddProfile(Profile profile)
+        {
+            return _collection.TryAdd(profile.UserID, profile);
+        }
+
+        public void RemoveProfile(Profile profile)
+        {
+            _collection.Remove(profile.UserID);
+        }
 
         private void LoadCollection()
         {
+            Profile p1 = new Profile();
 
+
+            _collection.Add(p1.UserID, p1);
         }
 
 
