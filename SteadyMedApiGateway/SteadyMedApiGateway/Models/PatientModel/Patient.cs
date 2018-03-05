@@ -9,16 +9,16 @@ namespace SteadyMedApiGateway.Models.PatientModel
 {
     public class Patient : User
     {
-        private HashSet<int> _steadyMedsOwned;
-        private SortedSet<MedicationPlan> _plans;
+        private List<int> _steadyMedsOwned;
+        private List<MedicationPlan> _plans;
 
         public Patient()
         {
-            _steadyMedsOwned = new HashSet<int>();
-            _plans = new SortedSet<MedicationPlan>();
+            _steadyMedsOwned = new List<int>();
+            _plans = new List<MedicationPlan>();
         }
 
-        public HashSet<int> SteadyMedsOwned { get { return _steadyMedsOwned; } set { _steadyMedsOwned = value; } }
-        public SortedSet<MedicationPlan> Plans { get { return _plans; } set { _plans = value; } }
+        public List<int> SteadyMedsOwned { get { return _steadyMedsOwned; } set { _steadyMedsOwned = value; } }
+        public List<MedicationPlan> Plans { get { return _plans; } set { _plans = value; } }
     }
 }

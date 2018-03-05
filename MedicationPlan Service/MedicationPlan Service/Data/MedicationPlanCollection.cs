@@ -55,7 +55,7 @@ namespace MedicationPlan_Service.Data
         //Add Medication Plan to connection
         public bool AddPlan(MedicationPlan plan)
         {
-            bool result = _plans.TryAdd(plan.MedicationPlanId, plan);
+            bool result = _plans.TryAdd(_plans.Keys.Count + 1, plan);
 
             return result;
         }

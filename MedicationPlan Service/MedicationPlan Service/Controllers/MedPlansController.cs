@@ -45,9 +45,6 @@ namespace MedicationPlan_Service.Controllers
 
             if (!_plans.AddPlan(plan)) return BadRequest();
 
-
-            Debug.WriteLine("Plan: " + plan.Medication);
-
             return CreatedAtRoute("GetPlan", new { id = plan.MedicationPlanId }, plan);
         }
 
