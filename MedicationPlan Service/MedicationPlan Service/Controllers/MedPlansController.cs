@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MedicationPlan_Service.Data;
 using MedicationPlan_Service.Models;
+using System.Diagnostics;
 
 namespace MedicationPlan_Service.Controllers
 {
@@ -43,6 +44,9 @@ namespace MedicationPlan_Service.Controllers
             if (plan == null) return BadRequest();
 
             if (!_plans.AddPlan(plan)) return BadRequest();
+
+
+            Debug.WriteLine("Plan: " + plan.Medication);
 
             return CreatedAtRoute("GetPlan", new { id = plan.MedicationPlanId }, plan);
         }

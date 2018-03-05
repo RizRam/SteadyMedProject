@@ -9,12 +9,15 @@ using SteadyMedApiGateway.Models.PatientMedicationPlan;
 using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics;
 using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace SteadyMedApiGateway.Controllers
 {
     public class PatientController : Controller
     {
-        private readonly HttpClient _client;
+        private HttpClient _client;
+
+        private const string MEDICATION_PLAN_URL = "http://localhost:50151/api/MedPlans";
 
         public PatientController(HttpClient client)
         {
@@ -70,22 +73,23 @@ namespace SteadyMedApiGateway.Controllers
         {
             if (model == null) RedirectToAction("Index", "Physician");
 
-            Debug.WriteLine("Model: " + model.NewMedPlan.MedicationPlanId);
             MedicationPlan plan = new MedicationPlan();
-            //plan.PhysicianId = model.CurrentPhysician.ID;
-            plan.PatientId = model.Patient.ID;
+            plan.PhysicianId = model.PhysicianId;
+            plan.PatientId = model.PatientId;
             //plan.Patient = model.Patient;
             plan.Medication = model.NewMedPlan.Medication;
             //plan.SteadyMedId = model.Patient.SteadyMedsOwned.FirstOrDefault();
             plan.HourlyInterval = model.NewMedPlan.HourlyInterval;
             plan.PillsPerInterval = model.NewMedPlan.PillsPerInterval;
 
-            //Add plan to database/service
+            var jsonRequest = JsonConvert.SerializeObject(plan);
+            var buffer = System.Text.Encoding.UTF8.GetBytes(jsonRequest);
+            var byteContent = new ByteArrayContent(buffer);
+            byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+            _client.BaseAddress = new Uri(MEDICATION_PLAN_URL);
+            var result = _client.PostAsync("", byteContent);
 
-
-
-            return RedirectToAction("Details", new { id = model.Patient.ID });
-
+            return RedirectToAction("Details", new { id = 1 });
         }
     }
 }

@@ -80,6 +80,8 @@
                 <div>
                     <form asp-action="CreateMedicationPlan" method="post">
                         <div class=" form-group">
+                            @Html.Hidden("PatientId", Model.Patient.ID)
+                            @Html.Hidden("PhysicianId", Model.CurrentPhysician.ID)
                             <label asp-for="NewMedPlan.Medication" class="col-md-2 control-label">Medication</label>
                             <div class="row">
                                 <input asp-for="NewMedPlan.Medication" class="form-control" />

@@ -12,5 +12,11 @@ namespace SteadyMedApiGateway.Models.PatientModel
         public Physician CurrentPhysician { get; set; }
         public Patient Patient { get; set; }
         public MedicationPlan NewMedPlan { get; set; }
+
+        //Lazy load for the patient id
+        public int PatientId { get; set; }
+        
+        //Lazy load for the physician Id
+        public int PhysicianId { get; set; }
     }
 }
