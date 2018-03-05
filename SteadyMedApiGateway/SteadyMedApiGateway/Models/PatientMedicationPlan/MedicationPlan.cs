@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SteadyMedApiGateway.Models.PatientModel;
 
 //Model for a medication plan. This encapsulates all of the information necessary to setup an up-to-date
 //schedule on a steadymed device.
-namespace SteadyMedApiGateway.Models.MedicationPlan
+namespace SteadyMedApiGateway.Models.PatientMedicationPlan
 {
-    public class PatientMedicationPlan
+    public class MedicationPlan
     {
         //Medication Plan ID
         public int MedicationPlanId { get; set; }
+
+        //Patient this medication plan is associated with
+        public Patient Patient { get; set; }
 
         //Patient ID
         public int PatientId { get; set; }

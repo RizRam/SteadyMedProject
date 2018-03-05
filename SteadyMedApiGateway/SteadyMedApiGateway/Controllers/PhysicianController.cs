@@ -25,14 +25,14 @@ namespace SteadyMedApiGateway.Controllers
             {
                 new Patient()
                 {
-                    ID = 1, PatientFirstName = "Joseph"
+                    ID = 1, FirstName = "Joseph", LastName = "Stalin"
                 },
                 new Patient()
                 {
-                    ID = 2, PatientFirstName = "Johnson"
+                    ID = 2, FirstName = "Johnson", LastName = "& Johnson"
                 },
                 new Patient() {
-                    ID = 3, PatientFirstName = "Samantha"
+                    ID = 3, FirstName = "Samantha", LastName = "Robinson"
                 }
             };
 

@@ -5,24 +5,30 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using Newtonsoft.Json;
-using SteadyMedApiGateway.Models.MedicationPlan;
+using SteadyMedApiGateway.Models.PatientMedicationPlan;
 using System.Diagnostics;
 
 namespace SteadyMedApiGateway.Controllers
 {
     public class MedicationPlanController : Controller
     {
-        private HttpClient client = new HttpClient();
+        //HTTP Client to make API calls to the microservices
+        private readonly HttpClient _client;
 
         private const string MEDICATION_PLAN_SERVICE_URL = "http://localhost:50151/api/MedPlans/1";
 
+        public MedicationPlanController(HttpClient client)
+        {
+            _client = client;
+        }
+
         public async Task<IActionResult> Index(int medicationPlanId)
         {
-            HttpResponseMessage response = await client.GetAsync(MEDICATION_PLAN_SERVICE_URL);
+            HttpResponseMessage response = await _client.GetAsync(MEDICATION_PLAN_SERVICE_URL);
             if (response.IsSuccessStatusCode)
             {
                 var responseBody = await response.Content.ReadAsStringAsync();
-                PatientMedicationPlan medicationPlan = JsonConvert.DeserializeObject<PatientMedicationPlan>(responseBody);
+                MedicationPlan medicationPlan = JsonConvert.DeserializeObject<MedicationPlan>(responseBody);
                 return View(medicationPlan);
             }
             return View();

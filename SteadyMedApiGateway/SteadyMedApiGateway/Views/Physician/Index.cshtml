@@ -19,25 +19,25 @@
                     @Html.DisplayNameFor(model => model.Patients.First().ID)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Patients.First().PatientFirstName)
+                    @Html.DisplayNameFor(model => model.Patients.First().FirstName)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Patients.First().PatientLastName)
+                    @Html.DisplayNameFor(model => model.Patients.First().LastName)
                 </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var patient in Model.Patients)
             {
-                <tr class="patientRow" onclick="location.href='@Url.Action("Index", "Physician")'">
+                <tr class="patientRow" onclick="location.href='@Url.Action("Details", "Patient", new { id = patient.ID })'">
                     <td>
                         @patient.ID
                     </td>
                     <td>
-                        @patient.PatientFirstName
+                        @patient.FirstName
                     </td>
                     <td>
-                        @patient.PatientLastName
+                        @patient.LastName
                     </td>
                 </tr>
             }

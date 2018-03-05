@@ -1,35 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using SteadyMedApiGateway.Models.MedicationPlan;
+using SteadyMedApiGateway.Models.PatientMedicationPlan;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
 
 namespace SteadyMedApiGateway.Models.PatientModel
 {
-    public class Patient
+    public class Patient : User
     {
-        [DisplayName("Paient ID")]
-        //Patients ID
-        public int ID { get; set; }
+        private HashSet<int> _steadyMedsOwned;
+        private SortedSet<MedicationPlan> _plans;
 
-        [DisplayName("First Name")]
-        //Patients first name
-        public string PatientFirstName { get; set; }
+        public Patient()
+        {
+            _steadyMedsOwned = new HashSet<int>();
+            _plans = new SortedSet<MedicationPlan>();
+        }
 
-        [DisplayName("Last Name")]
-        //Patient's last name
-        public string PatientLastName { get; set; }
-
-        [DisplayName("Middle Initial")]
-        //Patient's middle name
-        public string PatientMiddleName { get; set; }
-
-        [DisplayName("Age")]
-        //Patient's age
-        public string PatientAge { get; set; }
-
-        //List of medication plans for the patient
-        public IEnumerable<PatientMedicationPlan> PatientMedicationPlans;
+        public HashSet<int> SteadyMedsOwned { get { return _steadyMedsOwned; } set { _steadyMedsOwned = value; } }
+        public SortedSet<MedicationPlan> Plans { get { return _plans; } set { _plans = value; } }
     }
 }
