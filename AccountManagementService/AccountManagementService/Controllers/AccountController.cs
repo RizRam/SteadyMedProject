@@ -9,22 +9,31 @@ using Microsoft.AspNetCore.JsonPatch;
 
 namespace AccountManagementService.Controllers
 {
+    //Controller that handles requests for Accounts.  Normally each of these requests
+    //will require authorization to ensure security and privacy
+
     [Route("api/[controller]/")]
     public class AccountController : Controller
     {
         private readonly AccountCollection _collection;
 
+        //Constructor
         public AccountController(AccountCollection collection)
         {
             _collection = collection;
         }
 
+
+        //Currently the Index for this controller returns all accounts tracked by the service
+        //This is for testing purposes.  For security and privacy, this GET will not exist in the actual service.
         [HttpGet]
         public IEnumerable<Account> Index()
         {
             return _collection.GetAll();
         }
 
+
+        //Request for an Account using id
         // GET api/values/5
         [HttpGet("{id}")]
         public Account Get(int id)
@@ -32,6 +41,7 @@ namespace AccountManagementService.Controllers
             return _collection.GetAccount(id);
         }
 
+        //POST a new account
         // POST api/values
         [HttpPost]
         public IActionResult Post([FromBody]Account value)
@@ -42,7 +52,8 @@ namespace AccountManagementService.Controllers
 
             return CreatedAtRoute("/api/[controller]/", new { id = value.AccountId }, value);
         }
-
+        
+        //Update an account given id
         // PUT api/values/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody]Account value)
@@ -63,6 +74,7 @@ namespace AccountManagementService.Controllers
             return new NoContentResult();
         }
 
+        //Update an account using a JsonPatch document
         [HttpPatch("{id}")]
         public IActionResult Patch(int id,[FromBody]JsonPatchDocument<Account> patch)
         {
@@ -74,6 +86,7 @@ namespace AccountManagementService.Controllers
             return new ObjectResult(original); 
         }
 
+        //Delete an Account
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)

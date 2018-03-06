@@ -6,8 +6,13 @@ using AccountManagementService.Models;
 
 namespace AccountManagementService.Data
 {
+
+    //An abstract data type to hold Account objects in memory
+    //In the actual implementation, this may simply be a direct query to
+    //the database.
     public class AccountCollection
     {
+        //Dictionary to hold Accounts
         private Dictionary<int, Account> _collection;
 
         public AccountCollection()
@@ -16,16 +21,19 @@ namespace AccountManagementService.Data
             LoadCollection();
         }
 
+        //Get a collection of all Accounts in AccountCollection
         public IEnumerable<Account> GetAll()
         {
             return _collection.Values;
         }
 
+        //Get Account specified by id
         public Account GetAccount(int id)
         {
             return _collection.GetValueOrDefault(id);
         }
 
+        //Get an Account speicified by the username
         public Account GetAccountByUserName(string userName)
         {
             Account result = (from a in _collection.Values
@@ -35,16 +43,19 @@ namespace AccountManagementService.Data
             return result;
         }
 
+        //Add an Account
         public bool AddAccount(Account account)
         {
             return _collection.TryAdd(account.AccountId, account);
         }
 
+        //Remove an Account
         public void RemoveAccount(int id)
         {
             _collection.Remove(id);
         }
 
+        //Pre-loads Account objects into AccountCollection for testing.
         private void LoadCollection()
         {
             Account acc1 = new Account();

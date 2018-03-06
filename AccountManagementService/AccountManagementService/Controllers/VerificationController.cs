@@ -8,13 +8,15 @@ using AccountManagementService.Data;
 
 namespace AccountManagementService.Controllers
 {
-
+    //Controller to handle verification requests
+    //In an actual implementation, this will be handled by the cloud's OAuth Service
     [Route("/api/[controller]/")]
     public class VerificationController : Controller
     {
 
         private readonly AccountCollection _collection;
 
+        //Construcctor
         public VerificationController(AccountCollection collection)
         {
             _collection = collection;

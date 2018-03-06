@@ -8,6 +8,11 @@ using AccountManagementService.Data;
 
 namespace AccountManagementService.Controllers
 {
+    //Controller used to handle Login requests
+    //This service may be integrated with the cloud
+    //OAuth service and may not be needed, but this would depend
+    //on how we trust the security of the cloud service to handle
+    //private account information.
     [Route("/api/[Controller]")]
     public class LoginController : Controller
     {
@@ -18,6 +23,8 @@ namespace AccountManagementService.Controllers
             _collection = collection;
         }
 
+
+        //
         [HttpGet]
         public IActionResult Login(string userName, string password)
         {
