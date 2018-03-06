@@ -3863,8 +3863,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Craig Rainey\\.nuget\\packages\\": {},
-    "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\RizMac\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -3872,17 +3872,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\SteadyMedDevice\\SteadyMedDevice\\SteadyMedDevice.csproj",
+      "projectUniqueName": "C:\\Users\\RizMac\\Desktop\\GitHub\\SteadyMedProject\\SteadyMedDevice\\SteadyMedDevice\\SteadyMedDevice.csproj",
       "projectName": "SteadyMedDevice",
-      "projectPath": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\SteadyMedDevice\\SteadyMedDevice\\SteadyMedDevice.csproj",
-      "packagesPath": "C:\\Users\\Craig Rainey\\.nuget\\packages\\",
-      "outputPath": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\SteadyMedDevice\\SteadyMedDevice\\obj\\",
+      "projectPath": "C:\\Users\\RizMac\\Desktop\\GitHub\\SteadyMedProject\\SteadyMedDevice\\SteadyMedDevice\\SteadyMedDevice.csproj",
+      "packagesPath": "C:\\Users\\RizMac\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\RizMac\\Desktop\\GitHub\\SteadyMedProject\\SteadyMedDevice\\SteadyMedDevice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Craig Rainey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RizMac\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3906,14 +3906,14 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNet.WebApi.Client": {
             "target": "Package",
-            "version": "5.2.4"
+            "version": "[5.2.4, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           }
         },
         "imports": [
