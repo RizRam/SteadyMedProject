@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using SteadyMedApiGateway.Models.PatientModel;
 using SteadyMedApiGateway.Models.PhysicianViewModels;
+using Newtonsoft.Json;
 
 namespace SteadyMedApiGateway.Controllers
 {
@@ -13,14 +14,25 @@ namespace SteadyMedApiGateway.Controllers
     {
         private HttpClient httpClient;
 
+        private const string PATIENT_PROFILE_URL = "http://localhost:";
+
         public PhysicianController(HttpClient client)
         {
             httpClient = client;
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int id)
         {
+            /*
+            HttpResponseMessage response = await httpClient.GetAsync(String.Format("{0}/{1}", PATIENT_PROFILE_URL, id));
+            if (response.IsSuccessStatusCode)
+            {
+                var responseBody = await response.Content.ReadAsStringAsync();
+                patients = JsonConvert.DeserializeObject<List<Patient>>(responseBody);
+            }
+            */
+
             IEnumerable<Patient> patients = new List<Patient>
             {
                 new Patient()
@@ -35,16 +47,6 @@ namespace SteadyMedApiGateway.Controllers
                     ID = 3, FirstName = "Samantha", LastName = "Robinson"
                 }
             };
-
-            //IEnumerable<ServicePatient> patients = null;
-
-            //var serializer = new DataContractJsonSerializer(typeof(List<ServicePatient>));
-
-            //var stream = httpClient.GetStreamAsync("");
-
-            //stream.Wait();
-
-            //patients = serializer.ReadObject(stream.Result) as List<ServicePatient>;
 
             return View(new PhysicianViewModel(){ Patients = patients });
         }

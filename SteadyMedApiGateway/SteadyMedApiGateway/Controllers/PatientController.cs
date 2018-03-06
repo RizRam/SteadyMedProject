@@ -32,7 +32,7 @@ namespace SteadyMedApiGateway.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(Patient patient)
         {
 
             PatientViewModel model = new PatientViewModel();
@@ -43,36 +43,15 @@ namespace SteadyMedApiGateway.Controllers
             currentPhysician.ID = 3;
             currentPhysician.FirstName = "Doctor McDoctor";
 
-            Patient temp = new Patient();
-
-            temp.ID = id;
-            temp.FirstName = "Patient Patient";
-            temp.SteadyMedsOwned.Add(4);
-
-            HttpResponseMessage response = await _client.GetAsync(String.Format("{0}/{1}", PATIENT_PLANS_URL, id));
+            HttpResponseMessage response = await _client.GetAsync(String.Format("{0}/{1}", PATIENT_PLANS_URL, patient.ID));
             if (response.IsSuccessStatusCode)
             {
                 var responseBody = await response.Content.ReadAsStringAsync();
-                temp.Plans = JsonConvert.DeserializeObject<List<MedicationPlan>>(responseBody);
+                patient.Plans = JsonConvert.DeserializeObject<List<MedicationPlan>>(responseBody);
             }
 
-            /*
-            temp.Plans.Add(new MedicationPlan
-            {
-                MedicationPlanId = 1,
-                Patient = temp,
-                PatientId = temp.ID,
-                PhysicianId = 5,
-                SteadyMedId = 4,
-                Medication = "Crack",
-                HourlyInterval = 6,
-                PillsPerInterval = 2,
-                Completed = false
-            });
-            */
-
             model.CurrentPhysician = currentPhysician;
-            model.Patient = temp;
+            model.Patient = patient;
             model.NewMedPlan = new MedicationPlan();
 
             return View(model);
