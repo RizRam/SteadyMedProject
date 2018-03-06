@@ -9,3 +9,14 @@ C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\ob
 C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.pdb
 C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.dll
 C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.deps.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.runtimeconfig.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.runtimeconfig.dev.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\bin\Debug\netcoreapp2.0\ProfileService.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.csprojResolveAssemblyReference.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.csproj.CoreCompileInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.AssemblyInfoInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.AssemblyInfo.cs
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\ProfileService\ProfileService\obj\Debug\netcoreapp2.0\ProfileService.pdb

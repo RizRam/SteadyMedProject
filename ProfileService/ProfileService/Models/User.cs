@@ -8,8 +8,11 @@ namespace SteadyMedClient.Models
 {
     public class User : IdentityUser
     {
-        public int UserId { get; set; }
-        public string Name { get; set; }
+        public int ID { get; set; }
+        public string FirstName { get; set; }
+
+        //User's last name
+        public string LastName { get; set; }
 
     }
 }

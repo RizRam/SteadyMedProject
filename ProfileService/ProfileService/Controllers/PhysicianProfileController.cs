@@ -15,34 +15,42 @@ namespace ProfileService.Controllers
             return View();
         }
         
-        [HttpGet("{id:int}/patients", Name = "GetPhysicianPatients")]
+        [HttpGet("{id}", Name = "GetPhysicianPatients")]
         public IEnumerable<Patient> Index(int id)
         {
             return new List<Patient>
             {
                 new Patient()
                 {
-                    Name = "Joe",
-                    Email = "joe@myhouse.com",
-                    UserId = 0
+                    FirstName = "Justin",
+                    LastName = "Gilroy",
+                    Email = "justin@example.com",
+                    ID = 0,
+                    PhysicianID = 1
                 },
                 new Patient()
                 {
-                    Name = "Joe",
-                    Email = "joe@myhouse.com",
-                    UserId = 1
+                    FirstName = "Rizky",
+                    LastName = "Ramdhani",
+                    Email = "riz@example.com",
+                    ID = 1,
+                    PhysicianID = 1
                 },
                 new Patient()
                 {
-                    Name = "Joe",
-                    Email = "joe@myhouse.com",
-                    UserId = 2
+                    FirstName = "Daniel",
+                    LastName = "Blashaw",
+                    Email = "daniel@example.com",
+                    ID = 2,
+                    PhysicianID = 1
                 },
                 new Patient()
                 {
-                    Name = "Joe",
-                    Email = "joe@myhouse.com",
-                    UserId = 3
+                    FirstName = "Craig",
+                    LastName = "Rainey",
+                    Email = "craig@myhouse.com",
+                    ID = 3,
+                    PhysicianID = 1
                 }
             };
         }

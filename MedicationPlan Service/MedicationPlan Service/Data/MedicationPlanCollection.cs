@@ -97,7 +97,7 @@ namespace MedicationPlan_Service.Data
             _plans.Add(3, new MedicationPlan
             {
                 MedicationPlanId = 3,
-                PatientId = 5,
+                PatientId = 0,
                 PhysicianId = 6,
                 Medication = "Robitussin",
                 HourlyInterval = 6,
@@ -109,7 +109,7 @@ namespace MedicationPlan_Service.Data
             _plans.Add(4, new MedicationPlan
             {
                 MedicationPlanId = 4,
-                PatientId = 7,
+                PatientId = 2,
                 PhysicianId = 6,
                 Medication = "Aspirin",
                 HourlyInterval = 6,

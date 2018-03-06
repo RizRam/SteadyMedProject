@@ -9,3 +9,14 @@ C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\Account
 C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.pdb
 C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.dll
 C:\Users\RizMac\Desktop\GitHub\SteadyMedProject\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.deps.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.runtimeconfig.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.runtimeconfig.dev.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\bin\Debug\netcoreapp2.0\AccountManagementService.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.csprojResolveAssemblyReference.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.csproj.CoreCompileInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.AssemblyInfoInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.AssemblyInfo.cs
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\AccountManagementService\AccountManagementService\obj\Debug\netcoreapp2.0\AccountManagementService.pdb
