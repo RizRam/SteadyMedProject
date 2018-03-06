@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-/// <summary>
-/// The current state of the device which stipulates notifications to the user
-/// include the schedule of notifications and information related to the user's
-/// physician
-/// </summary>
-
-namespace SteadyMedDevice
+namespace SteadyMedClient.Models
 {
-    class MedicationPlan
+    public class MedicationPlan
     {
         public int MedicationPlanId { get; set; }
         public int PatientId { get; set; }
+        public User Patient { get; set; }
         public int PhysicianId { get; set; }
         public int SteadyMedId { get; set; }
         public string Medication { get; set; }
         public int HourlyInterval { get; set; }
         public int PillsPerInterval { get; set; }
-        public bool Completed { get; set; }
+        public Boolean Completed { get; set; }
     }
 }
