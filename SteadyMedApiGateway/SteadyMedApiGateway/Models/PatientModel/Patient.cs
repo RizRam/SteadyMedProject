@@ -20,5 +20,8 @@ namespace SteadyMedApiGateway.Models.PatientModel
 
         public List<int> SteadyMedsOwned { get { return _steadyMedsOwned; } set { _steadyMedsOwned = value; } }
         public List<MedicationPlan> Plans { get { return _plans; } set { _plans = value; } }
+
+        //ID of the physician this patient is associated with
+        public int PhysicianID;
     }
 }

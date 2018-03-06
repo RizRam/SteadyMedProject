@@ -18,5 +18,8 @@ namespace SteadyMedClient.Models
 
         public HashSet<int> SteadyMedsOwned { get { return _steadyMedsOwned;  } set { _steadyMedsOwned = value; } }
         public SortedSet<MedicationPlan> Plans { get { return _plans; } set { _plans = value; } }
+
+        //ID of the physician this patient is associated with
+        public int PhysicianID;
     }
 }
