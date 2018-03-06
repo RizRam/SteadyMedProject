@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
+/// <summary>
+/// This log class would be used in the final device to maintain a history of the
+/// device and its usage that could be reported to the web interface as the device
+/// itself does not have a built in interface.
+/// </summary>
+
 namespace SteadyMedDevice
 {
     class SteadyMedMessageLogs

@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
+/// <summary>
+/// The current state of the device which stipulates notifications to the user
+/// include the schedule of notifications and information related to the user's
+/// physician
+/// </summary>
+
 namespace SteadyMedDevice
 {
     class MedicationPlan
