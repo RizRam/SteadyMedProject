@@ -4,8 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using SteadyMedApiGateway.Models.PatientModel;
 
-//Model for a medication plan. This encapsulates all of the information necessary to setup an up-to-date
-//schedule on a steadymed device.
+/// <summary>
+/// Author: Craig Rainey
+/// Model for a medication plan. This encapsulates all of the information necessary to setup an up-to-date
+/// schedule on a steadymed device.
+/// </summary>
 namespace SteadyMedApiGateway.Models.PatientMedicationPlan
 {
     public class MedicationPlan

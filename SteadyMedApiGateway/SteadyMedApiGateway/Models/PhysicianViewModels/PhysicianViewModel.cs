@@ -5,22 +5,24 @@ using System.Threading.Tasks;
 using SteadyMedApiGateway.Models.PatientModel;
 using System.ComponentModel;
 
-//Model for the physician that will encapsulate information regarding the physician along with
-//references to each patient the physician is responsible for.
+/// <summary>
+/// View model for the physician's. This contains information regarding the Physician along with a list of patients
+/// that are associated with the Physician.
+/// </summary>
 namespace SteadyMedApiGateway.Models.PhysicianViewModels
 {
     public class PhysicianViewModel
     {
-        [DisplayName("ID")]
         //ID of the physician
+        [DisplayName("ID")]
         public string PhysicianId { get; set; }
 
-        [DisplayName("First Name")]
         //First name of the physician
+        [DisplayName("First Name")]
         public string PhysicianFirstName { get; set; }
 
-        [DisplayName("Last Name")]
         //Last name of the physician
+        [DisplayName("Last Name")]
         public string PhysicianLastName { get; set; }
 
         //List of patients seeing the physician

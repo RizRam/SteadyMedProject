@@ -14,6 +14,9 @@ using SteadyMedApiGateway.Models;
 using SteadyMedApiGateway.Models.ManageViewModels;
 using SteadyMedApiGateway.Services;
 
+/// <summary>
+/// Framework provided by ASP.NET Core
+/// </summary>
 namespace SteadyMedApiGateway.Controllers
 {
     [Authorize]

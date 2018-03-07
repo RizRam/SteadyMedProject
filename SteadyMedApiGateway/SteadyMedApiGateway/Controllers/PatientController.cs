@@ -11,25 +11,37 @@ using System.Diagnostics;
 using System.Net.Http;
 using Newtonsoft.Json;
 
+/// <summary>
+/// Author: Craig Rainey
+/// Controller to connect the front-end with the microservices that put together the patient pages and its functionality.
+/// </summary>
 namespace SteadyMedApiGateway.Controllers
 {
     public class PatientController : Controller
     {
+        //HTTP Client
         private HttpClient _client;
 
+        //Medication Plan microsevice URL
         private const string MEDICATION_PLAN_URL = "http://localhost:50151/api/MedPlans";
+
+        //Patient Medication Plan microservice URL
         private const string PATIENT_PLANS_URL = "http://localhost:50151/api/PatientMedPlans";
 
+        //Constructor
         public PatientController(HttpClient client)
         {
             _client = client;
         }
 
+        //Index page for the Patient
         public IActionResult Index()
         {
             return View();
         }
 
+        //Details page for the patient. This will show the patient details along with a list of the medication plans they
+        //currently have set up.
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> Details(Patient patient)
@@ -57,7 +69,11 @@ namespace SteadyMedApiGateway.Controllers
             return View(model);
         }
 
+        //Creates medication plans for the patient. These will be persisted and then send the physician back to the index
+        //page.
+        //KNOWN BUG: If the page leads back to the patient details page, then the medication plan will not show immediately.
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateMedicationPlan(PatientViewModel model)
         {
             if (model == null) RedirectToAction("Index", "Physician");
@@ -66,9 +82,7 @@ namespace SteadyMedApiGateway.Controllers
             plan.MedicationPlanId = 10;
             plan.PhysicianId = model.PhysicianId;
             plan.PatientId = model.PatientId;
-            //plan.Patient = model.Patient;
             plan.Medication = model.NewMedPlan.Medication;
-            //plan.SteadyMedId = model.Patient.SteadyMedsOwned.FirstOrDefault();
             plan.HourlyInterval = model.NewMedPlan.HourlyInterval;
             plan.PillsPerInterval = model.NewMedPlan.PillsPerInterval;
             plan.Completed = false;
