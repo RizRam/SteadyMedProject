@@ -11,6 +11,7 @@ using System.Diagnostics;
 
 namespace SteadyMedApiGateway.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     public class GatewayController : Controller
     {
@@ -30,6 +31,7 @@ namespace SteadyMedApiGateway.Controllers
         private const string PATIENT_PROFILE_URL = "http://localhost:56693/api/physicianprofile";
 
         [HttpGet]
+        [Route("GetPatientMedicationPlans")]
         public static async Task<List<MedicationPlan>> GetPatientMedicationPlans(int id)
         {
             List<MedicationPlan> medicationPlans = new List<MedicationPlan>();
@@ -57,18 +59,12 @@ namespace SteadyMedApiGateway.Controllers
             return result.IsCompletedSuccessfully ? true : false;
         }
 
-        [HttpGet]
-        public IActionResult Help()
-        {
-            return Ok();
-        }
-
         /// <summary>
         /// Returns a list of patients associated with the Physician
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("api/[controller]")]
+        [HttpGet]
         public static async Task<IEnumerable<Patient>> GetPhysicianPatients(int id)
         {
             IEnumerable<Patient> patients = new List<Patient>();
