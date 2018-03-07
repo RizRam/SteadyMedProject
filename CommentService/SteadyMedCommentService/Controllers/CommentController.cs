@@ -5,10 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SteadyMedCommentService.Models;
 
-//Author: Craig Rainey
-//Controller for the Comment service
+/// <summary>
+/// Author: Craig Rainey
+/// Controller for the Comment Service. This will handle the creation, retrieval, updating, and deletion of comments
+/// between physicians, patients, and caretakers.
+/// </summary>
 namespace SteadyMedCommentService.Controllers
 {
+    /// <summary>
+    /// Controller for the Comments
+    /// </summary>
     [Route("api/[controller]")]
     public class CommentController : Controller
     {
@@ -16,6 +22,10 @@ namespace SteadyMedCommentService.Controllers
         //Reference to the CommentContext
         private readonly CommentContext _context;
 
+        /// <summary>
+        /// Constructors for the Comment Controller
+        /// </summary>
+        /// <param name="context"></param>
         public CommentController(CommentContext context)
         {
             _context = context;
@@ -28,7 +38,11 @@ namespace SteadyMedCommentService.Controllers
             }
         }
 
-        //Create or Write a comment
+        /// <summary>
+        /// Method to create Comments and add them to the Comment database.
+        /// </summary>
+        /// <param name="addComment"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Create([FromBody] Comment addComment)
         {
@@ -42,7 +56,13 @@ namespace SteadyMedCommentService.Controllers
             return CreatedAtRoute("GetComment", new { id = addComment.AuthorId }, addComment);
         }
 
-        //Update the comment
+        /// <summary>
+        /// Updates comments and saves the new information in the database. Updates eventually including switching from
+        /// "unread" to "read" and editing the content of the comment
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="updateComment"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public IActionResult Update(int id, [FromBody] Comment updateComment)
         {
@@ -64,7 +84,11 @@ namespace SteadyMedCommentService.Controllers
             return new NoContentResult();
         }
 
-        //Retrieve All comments related to a medication plan
+        /// <summary>
+        /// Get all comments related to a medication plan. Requires the id of the medication plan
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}", Name = "GetMedicationPlanComments")]
         public IActionResult GetMedicationPlanComments(int id)
         {
@@ -76,7 +100,11 @@ namespace SteadyMedCommentService.Controllers
             return new ObjectResult(comments);
         }
 
-        //Delete a comment
+        /// <summary>
+        /// Deletes a comments. Requires the id of the comment
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

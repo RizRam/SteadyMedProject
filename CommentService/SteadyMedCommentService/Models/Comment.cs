@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-//Author: Craig Rainey
-//Model for comments
+/// <summary>
+/// Author: Craig Rainey
+/// Comment model. This encapulates all of the comment information
+/// </summary>
 namespace SteadyMedCommentService.Models
 {
     public class Comment

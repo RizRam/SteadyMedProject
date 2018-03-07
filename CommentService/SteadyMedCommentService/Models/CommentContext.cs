@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-//Author:Craig Rainey
-//Context for the Comments
+/// <summary>
+/// Author: Craig Rainey
+/// Context for the comments. This is the access point for the database that will contain comments
+/// </summary>
 namespace SteadyMedCommentService.Models
 {
     public class CommentContext : DbContext
