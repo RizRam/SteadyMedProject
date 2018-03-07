@@ -13132,11 +13132,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\SteadyMedApiGateway\\SteadyMedApiGateway\\SteadyMedApiGateway.csproj",
+      "projectUniqueName": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\SteadyMedClient2\\SteadyMedApiGateway\\SteadyMedApiGateway.csproj",
       "projectName": "SteadyMedApiGateway",
-      "projectPath": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\SteadyMedApiGateway\\SteadyMedApiGateway\\SteadyMedApiGateway.csproj",
+      "projectPath": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\SteadyMedClient2\\SteadyMedApiGateway\\SteadyMedApiGateway.csproj",
       "packagesPath": "C:\\Users\\Craig Rainey\\.nuget\\packages\\",
-      "outputPath": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\SteadyMedApiGateway\\SteadyMedApiGateway\\obj\\",
+      "outputPath": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\SteadyMedClient2\\SteadyMedApiGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"

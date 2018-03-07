@@ -22,3 +22,15 @@ L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedApiGateway\SteadyMe
 L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedApiGateway\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\SteadyMedApiGateway.AssemblyInfo.cs
 L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedApiGateway\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\SteadyMedApiGateway.dll
 L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedApiGateway\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\SteadyMedApiGateway.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\bin\Debug\netcoreapp2.0\SteadyMedApiGateway.deps.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\bin\Debug\netcoreapp2.0\SteadyMedApiGateway.runtimeconfig.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\bin\Debug\netcoreapp2.0\SteadyMedApiGateway.runtimeconfig.dev.json
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\bin\Debug\netcoreapp2.0\SteadyMedApiGateway.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\bin\Debug\netcoreapp2.0\SteadyMedApiGateway.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\SteadyMedApiGateway.csprojResolveAssemblyReference.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\SteadyMedApiGateway.csproj.CoreCompileInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\SteadyMedApiGateway.AssemblyInfoInputs.cache
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\SteadyMedApiGateway.AssemblyInfo.cs
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\SteadyMedApiGateway.dll
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\SteadyMedApiGateway.pdb
+L:\MSCSS\CSS553_SoftwareArchitecture\SteadyMed\Repo\SteadyMedClient2\SteadyMedApiGateway\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

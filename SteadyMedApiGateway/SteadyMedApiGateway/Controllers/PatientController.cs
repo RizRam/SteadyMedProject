@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using SteadyMedApiGateway.Models.PatientModel;
 using SteadyMedApiGateway.Models.PhysicianViewModels;
 using SteadyMedApiGateway.Models.PatientMedicationPlan;
+using SteadyMedApiGateway.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics;
 using System.Net.Http;
@@ -55,12 +56,7 @@ namespace SteadyMedApiGateway.Controllers
             currentPhysician.ID = 3;
             currentPhysician.FirstName = "Doctor McDoctor";
 
-            HttpResponseMessage response = await _client.GetAsync(String.Format("{0}/{1}", PATIENT_PLANS_URL, patient.ID));
-            if (response.IsSuccessStatusCode)
-            {
-                var responseBody = await response.Content.ReadAsStringAsync();
-                patient.Plans = JsonConvert.DeserializeObject<List<MedicationPlan>>(responseBody);
-            }
+            patient.Plans = GatewayController.GetPatientMedicationPlans(patient.ID).Result;
 
             model.CurrentPhysician = currentPhysician;
             model.Patient = patient;
@@ -87,11 +83,7 @@ namespace SteadyMedApiGateway.Controllers
             plan.PillsPerInterval = model.NewMedPlan.PillsPerInterval;
             plan.Completed = false;
 
-            var jsonRequest = JsonConvert.SerializeObject(plan);
-            var buffer = System.Text.Encoding.UTF8.GetBytes(jsonRequest);
-            var byteContent = new ByteArrayContent(buffer);
-            byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-            var result = _client.PostAsync(MEDICATION_PLAN_URL, byteContent);
+            GatewayController.CreateMedicationPlan(plan);
 
             return RedirectToAction("Index", "Physician");
         }
