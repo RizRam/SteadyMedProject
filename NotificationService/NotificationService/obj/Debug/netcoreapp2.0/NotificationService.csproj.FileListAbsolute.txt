@@ -1,0 +1,11 @@
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\bin\Debug\netcoreapp2.0\NotificationService.deps.json
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\bin\Debug\netcoreapp2.0\NotificationService.runtimeconfig.json
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\bin\Debug\netcoreapp2.0\NotificationService.runtimeconfig.dev.json
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\bin\Debug\netcoreapp2.0\NotificationService.dll
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\obj\Debug\netcoreapp2.0\NotificationService.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\obj\Debug\netcoreapp2.0\NotificationService.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\obj\Debug\netcoreapp2.0\NotificationService.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\obj\Debug\netcoreapp2.0\NotificationService.AssemblyInfo.cs
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\bin\Debug\netcoreapp2.0\NotificationService.pdb
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\obj\Debug\netcoreapp2.0\NotificationService.dll
+C:\Users\HP\Desktop\SteadyMedProject-master\NotificationService\NotificationService\obj\Debug\netcoreapp2.0\NotificationService.pdb
