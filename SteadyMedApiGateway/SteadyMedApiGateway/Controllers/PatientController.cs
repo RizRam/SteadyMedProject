@@ -56,7 +56,7 @@ namespace SteadyMedApiGateway.Controllers
             currentPhysician.ID = 3;
             currentPhysician.FirstName = "Doctor McDoctor";
 
-            patient.Plans = GatewayController.GetPatientMedicationPlans(patient.ID).Result;
+            patient.Plans = new GatewayController().GetPatientMedicationPlans(patient.ID).Result;
 
             model.CurrentPhysician = currentPhysician;
             model.Patient = patient;
@@ -83,7 +83,7 @@ namespace SteadyMedApiGateway.Controllers
             plan.PillsPerInterval = model.NewMedPlan.PillsPerInterval;
             plan.Completed = false;
 
-            GatewayController.CreateMedicationPlan(plan);
+            new GatewayController().CreateMedicationPlan(plan);
 
             return RedirectToAction("Index", "Physician");
         }
