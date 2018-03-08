@@ -9,6 +9,10 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Diagnostics;
 
+/// <summary>
+/// API Gateway that handles making REST calls to the appropriate microservices to perform actions.
+/// This can be called by third-party developers.
+/// </summary>
 namespace SteadyMedApiGateway.Controllers
 {
     [Produces("application/json")]
