@@ -14,6 +14,9 @@ namespace SteadyMedApiGateway.Models
         [DisplayName("ID")]
         public int ID { get; set; }
 
+        [DisplayName("Name")]
+        public string Name { get; set; }
+
         //User's first name
         [DisplayName("First Name")]
         public string FirstName { get; set; }

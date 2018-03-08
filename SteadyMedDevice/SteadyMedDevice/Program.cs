@@ -15,7 +15,7 @@ namespace SteadyMedDevice
 {
     class Program
     {
-        private static int STEADY_MED_ID = 2;
+        private static int STEADY_MED_ID = 10;
         private static string STEADYMED_SERVICE_BASEURL = "http://localhost:50151"; 
         static HttpClient client = new HttpClient();
 

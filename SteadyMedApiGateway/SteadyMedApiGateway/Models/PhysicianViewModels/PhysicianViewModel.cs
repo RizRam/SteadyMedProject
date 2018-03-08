@@ -17,6 +17,9 @@ namespace SteadyMedApiGateway.Models.PhysicianViewModels
         [DisplayName("ID")]
         public string PhysicianId { get; set; }
 
+        [DisplayName("Name")]
+        public string Name { get; set; }
+
         //First name of the physician
         [DisplayName("First Name")]
         public string PhysicianFirstName { get; set; }

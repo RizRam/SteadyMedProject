@@ -7,6 +7,8 @@ using System.Net.Http;
 using SteadyMedApiGateway.Models.PatientModel;
 using SteadyMedApiGateway.Models.PhysicianViewModels;
 using Newtonsoft.Json;
+using SteadyMedApiGateway.Models;
+using SteadyMedApiGateway.Data;
 
 /// <summary>
 /// Author: Craig Rainey
@@ -18,29 +20,37 @@ namespace SteadyMedApiGateway.Controllers
     {
         //HTTP Client used for REST calls
         private HttpClient httpClient;
+        private MyUserManager _userManager;
 
         //URL of the service
         private const string PATIENT_PROFILE_URL = "http://localhost:56693/api/physicianprofile";
 
         //Constructor
-        public PhysicianController(HttpClient client)
+        public PhysicianController(HttpClient client, MyUserManager myUserManager)
         {
             httpClient = client;
+            _userManager = myUserManager;
         }
 
-        //Returns the controller for the index view. This will get all of the patients associated with the physician.
+
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Details(int id)
         {
+            PhysicianViewModel model = new PhysicianViewModel();
+
             IEnumerable<Patient> patients = new List<Patient>();
-            HttpResponseMessage response = await httpClient.GetAsync(String.Format("{0}/{1}", PATIENT_PROFILE_URL, 1));
+            HttpResponseMessage response = await httpClient.GetAsync(String.Format("{0}/{1}", PATIENT_PROFILE_URL, id));
             if (response.IsSuccessStatusCode)
             {
                 var responseBody = await response.Content.ReadAsStringAsync();
                 patients = JsonConvert.DeserializeObject<List<Patient>>(responseBody);
             }
 
-            return View(new PhysicianViewModel(){ Patients = patients });
+            model.Patients = patients;
+            model.Name = _userManager.User.Name;
+
+            //return View(new PhysicianViewModel() { Patients = patients });
+            return View(model);
         }
     }
 }

@@ -38,6 +38,7 @@ namespace SteadyMedApiGateway
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddSingleton<HttpClient>();
+            services.AddSingleton<MyUserManager>();
 
             services.AddMvc();
         }

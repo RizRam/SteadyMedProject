@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics;
 using System.Net.Http;
 using Newtonsoft.Json;
+using SteadyMedApiGateway.Data;
 
 /// <summary>
 /// Author: Craig Rainey
@@ -21,6 +22,7 @@ namespace SteadyMedApiGateway.Controllers
     {
         //HTTP Client
         private HttpClient _client;
+        private MyUserManager _userManager;
 
         //Medication Plan microsevice URL
         private const string MEDICATION_PLAN_URL = "http://localhost:50151/api/MedPlans";
@@ -29,9 +31,10 @@ namespace SteadyMedApiGateway.Controllers
         private const string PATIENT_PLANS_URL = "http://localhost:50151/api/PatientMedPlans";
 
         //Constructor
-        public PatientController(HttpClient client)
+        public PatientController(HttpClient client, MyUserManager myUserManager)
         {
             _client = client;
+            _userManager = myUserManager;
         }
 
         //Index page for the Patient
@@ -43,7 +46,7 @@ namespace SteadyMedApiGateway.Controllers
         //Details page for the patient. This will show the patient details along with a list of the medication plans they
         //currently have set up.
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> Details(Patient patient)
         {
 
@@ -52,8 +55,7 @@ namespace SteadyMedApiGateway.Controllers
             //var currentUser = await _userManager.GetUserAsync(User) as Physician;
 
             Physician currentPhysician = new Physician();
-            currentPhysician.ID = 3;
-            currentPhysician.FirstName = "Doctor McDoctor";
+            currentPhysician.ID = _userManager.User.AccountId;
 
             HttpResponseMessage response = await _client.GetAsync(String.Format("{0}/{1}", PATIENT_PLANS_URL, patient.ID));
             if (response.IsSuccessStatusCode)
@@ -73,15 +75,16 @@ namespace SteadyMedApiGateway.Controllers
         //page.
         //KNOWN BUG: If the page leads back to the patient details page, then the medication plan will not show immediately.
         [HttpPost]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> CreateMedicationPlan(PatientViewModel model)
         {
             if (model == null) RedirectToAction("Index", "Physician");
 
             MedicationPlan plan = new MedicationPlan();
             plan.MedicationPlanId = 10;
-            plan.PhysicianId = model.PhysicianId;
+            plan.PhysicianId = model.CurrentPhysician.ID;
             plan.PatientId = model.PatientId;
+            plan.SteadyMedId = model.NewMedPlan.SteadyMedId;
             plan.Medication = model.NewMedPlan.Medication;
             plan.HourlyInterval = model.NewMedPlan.HourlyInterval;
             plan.PillsPerInterval = model.NewMedPlan.PillsPerInterval;
@@ -93,7 +96,7 @@ namespace SteadyMedApiGateway.Controllers
             byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
             var result = _client.PostAsync(MEDICATION_PLAN_URL, byteContent);
 
-            return RedirectToAction("Index", "Physician");
+            return RedirectToAction("Details", "Physician", new { id = model.CurrentPhysician.ID});
         }
     }
 }

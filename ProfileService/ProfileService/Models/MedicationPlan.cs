@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SteadyMedClient.Models
+namespace ProfileService.Models
 {
     public class MedicationPlan
     {

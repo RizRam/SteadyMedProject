@@ -13123,8 +13123,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Craig Rainey\\.nuget\\packages\\": {},
-    "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\RizMac\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -13132,17 +13132,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\AccountManagementService\\AccountManagementService\\AccountManagementService.csproj",
+      "projectUniqueName": "C:\\Users\\RizMac\\Desktop\\GitHub\\SteadyMedProject\\AccountManagementService\\AccountManagementService\\AccountManagementService.csproj",
       "projectName": "AccountManagementService",
-      "projectPath": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\AccountManagementService\\AccountManagementService\\AccountManagementService.csproj",
-      "packagesPath": "C:\\Users\\Craig Rainey\\.nuget\\packages\\",
-      "outputPath": "L:\\MSCSS\\CSS553_SoftwareArchitecture\\SteadyMed\\Repo\\AccountManagementService\\AccountManagementService\\obj\\",
+      "projectPath": "C:\\Users\\RizMac\\Desktop\\GitHub\\SteadyMedProject\\AccountManagementService\\AccountManagementService\\AccountManagementService.csproj",
+      "packagesPath": "C:\\Users\\RizMac\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\RizMac\\Desktop\\GitHub\\SteadyMedProject\\AccountManagementService\\AccountManagementService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Craig Rainey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RizMac\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13166,18 +13166,18 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.5, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           },
-          "Microsoft.AspNetCore.All": {
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "2.0.5"
+            "version": "[2.0.2, )"
           }
         },
         "imports": [

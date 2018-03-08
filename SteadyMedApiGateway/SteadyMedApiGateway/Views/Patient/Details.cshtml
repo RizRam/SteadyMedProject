@@ -21,9 +21,10 @@
         <img src="~/images/placeholder-image-person.jpg" />
     </div>
 </div>
+    
 <div class="row">
     <div class="col-md-4 col-md-offset-5">
-        <h4>Medication Plans</h4>
+        <h4>Medication Plan</h4>
     </div>
     <div class="col-md-9 col-md-offset-2">
         <table class="table">
@@ -88,6 +89,7 @@
                 <div>
                     <form asp-action="CreateMedicationPlan" method="post">
                         <div class=" form-group">
+                            @Html.HiddenFor(model => model.CurrentPhysician.ID)
                             @Html.Hidden("PatientId", Model.Patient.ID)
                             @Html.Hidden("PhysicianId", Model.CurrentPhysician.ID)
                             <label asp-for="NewMedPlan.Medication" class="col-md-2 control-label">Medication</label>
