@@ -13123,7 +13123,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RizMac\\.nuget\\packages\\": {},
+    "C:\\Users\\greyg\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13132,18 +13133,20 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\RizMac\\Desktop\\GitHub\\SteadyMedProject\\SteadyMedApiGateway\\SteadyMedApiGateway\\SteadyMedApiGateway.csproj",
+      "projectUniqueName": "C:\\Users\\greyg\\OneDrive\\Desktop\\sm3\\steadymedproject\\SteadyMedApiGateway\\SteadyMedApiGateway\\SteadyMedApiGateway.csproj",
       "projectName": "SteadyMedApiGateway",
-      "projectPath": "C:\\Users\\RizMac\\Desktop\\GitHub\\SteadyMedProject\\SteadyMedApiGateway\\SteadyMedApiGateway\\SteadyMedApiGateway.csproj",
-      "packagesPath": "C:\\Users\\RizMac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RizMac\\Desktop\\GitHub\\SteadyMedProject\\SteadyMedApiGateway\\SteadyMedApiGateway\\obj\\",
+      "projectPath": "C:\\Users\\greyg\\OneDrive\\Desktop\\sm3\\steadymedproject\\SteadyMedApiGateway\\SteadyMedApiGateway\\SteadyMedApiGateway.csproj",
+      "packagesPath": "C:\\Users\\greyg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\greyg\\OneDrive\\Desktop\\sm3\\steadymedproject\\SteadyMedApiGateway\\SteadyMedApiGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RizMac\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\greyg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"

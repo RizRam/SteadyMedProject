@@ -38,15 +38,7 @@ namespace SteadyMedApiGateway.Controllers
         {
             PhysicianViewModel model = new PhysicianViewModel();
 
-            IEnumerable<Patient> patients = new List<Patient>();
-            HttpResponseMessage response = await httpClient.GetAsync(String.Format("{0}/{1}", PATIENT_PROFILE_URL, id));
-            if (response.IsSuccessStatusCode)
-            {
-                var responseBody = await response.Content.ReadAsStringAsync();
-                patients = JsonConvert.DeserializeObject<List<Patient>>(responseBody);
-            }
-
-            model.Patients = patients;
+            model.Patients = new GatewayController().GetPhysicianPatients(id).Result;
             model.Name = _userManager.User.Name;
 
             //return View(new PhysicianViewModel() { Patients = patients });
