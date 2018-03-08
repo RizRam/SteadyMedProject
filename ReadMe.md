@@ -50,15 +50,16 @@ Hourly Interval: 6
 Pills Per Interval: 2
 SteadyMed ID: 10 **(Note: This must be 10 for this DEMO to work)**
 ```
-5. Once completed, you will be redirected to the physician profile pagea again.  Click on the same patient to see that a new medication plan has been added to the patient's list of medication plan.
-6.Look at the SteadyMed Device console window to see the new medication plan details in the console.
+Once completed, you will be redirected to the physician profile page again.  
+
+5. Click on the same patient to see that a new medication plan has been added to the patient's list of medication plan.
+6. Look at the SteadyMed Device console window to see the new medication plan details in the console.
 
 ## Authors
 * Craig Rainey
 * Rizky Ramdhani
 * Daniel Blashaw
 * Justin Gilroy
-
 
 
 
