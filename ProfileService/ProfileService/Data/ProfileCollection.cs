@@ -40,13 +40,44 @@ namespace ProfileService.Data
 
         private void LoadCollection()
         {
-            Profile p1 = new Profile();
+            Profile profile = new Profile();
+            profile.UserID = 1;
+            profile.Name = "Polly Smith";           
 
 
-            _collection.Add(p1.UserID, p1);
+            Patient p1 = new Patient
+            {
+                FirstName = "Michael",
+                LastName = "Jordan",
+                //Email = "justin@example.com",
+                ID = 2,
+                PhysicianID = 1
+            };
+
+            Patient p2 = new Patient
+            {
+                FirstName = "Mike",
+                LastName = "Tyson",
+                //Email = "riz@example.com",
+                ID = 3,
+                PhysicianID = 1
+            };
+
+
+            Patient p3 = new Patient
+            {
+                FirstName = "Captain",
+                LastName = "America",
+                //Email = "daniel@example.com",
+                ID = 4,
+                PhysicianID = 1
+            };
+
+            profile.Patients.Add(p1);
+            profile.Patients.Add(p2);
+            profile.Patients.Add(p3);
+
+            _collection.Add(profile.UserID, profile);
         }
-
-
-
     }
 }

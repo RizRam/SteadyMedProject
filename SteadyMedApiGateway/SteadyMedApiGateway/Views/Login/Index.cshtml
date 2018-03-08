@@ -1,0 +1,30 @@
+﻿@model SteadyMedApiGateway.Models.LoginViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="col-md-4">
+
+        <form asp-action="Login" method="post">
+            <div class="form-group">
+                <table class="table">
+                    <tr>
+                        <th><label asp-for="UserName"></label></th>
+                        <td><input asp-for="UserName" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <th><label asp-for="Password"></label></th>
+                        <td><input asp-for="Password" class="form-control" /></td>
+                    <tr>
+                 </table>
+                <div class="row">
+                    <button type="submit" class="btn btn-default">Login</button>
+                </div>
+            </div>
+        </form>
+</div>
+
+

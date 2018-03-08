@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace SteadyMedClient.Models
+namespace ProfileService.Models
 {
-    public class User : IdentityUser
+    public class User
     {
         public int ID { get; set; }
         public string FirstName { get; set; }
