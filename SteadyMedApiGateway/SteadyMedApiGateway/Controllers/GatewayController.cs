@@ -12,16 +12,17 @@ using System.Diagnostics;
 namespace SteadyMedApiGateway.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
+
     public class GatewayController : Controller
     {
         //HTTP Client
-        private static HttpClient _client = new HttpClient();
+        private HttpClient _client = new HttpClient();
 
         //HTTP Response Message
         private static HttpResponseMessage response;
 
         //Medication Plan microsevice URL
+
         private const string MEDICATION_PLAN_URL = "http://localhost:50151/api/MedPlans";
 
         //Patient Medication Plan microservice URL
@@ -31,8 +32,7 @@ namespace SteadyMedApiGateway.Controllers
         private const string PATIENT_PROFILE_URL = "http://localhost:56693/api/physicianprofile";
 
         [HttpGet]
-        [Route("GetPatientMedicationPlans")]
-        public static async Task<List<MedicationPlan>> GetPatientMedicationPlans(int id)
+        public async Task<List<MedicationPlan>> GetPatientMedicationPlans(int id)
         {
             List<MedicationPlan> medicationPlans = new List<MedicationPlan>();
             response = await _client.GetAsync(String.Format("{0}/{1}", PATIENT_PLANS_URL, id));
@@ -48,7 +48,7 @@ namespace SteadyMedApiGateway.Controllers
         /// Creates a medication plan and returns true if the operation was successful or else false. 
         /// </summary>
         [HttpPost]
-        public static Boolean CreateMedicationPlan(MedicationPlan createPlan)
+        public Boolean CreateMedicationPlan(MedicationPlan createPlan)
         {
             var jsonRequest = JsonConvert.SerializeObject(createPlan);
             var buffer = System.Text.Encoding.UTF8.GetBytes(jsonRequest);
@@ -65,7 +65,7 @@ namespace SteadyMedApiGateway.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public static async Task<IEnumerable<Patient>> GetPhysicianPatients(int id)
+        public async Task<IEnumerable<Patient>> GetPhysicianPatients(int id)
         {
             IEnumerable<Patient> patients = new List<Patient>();
             HttpResponseMessage response = await _client.GetAsync(String.Format("{0}/{1}", PATIENT_PROFILE_URL, 1));

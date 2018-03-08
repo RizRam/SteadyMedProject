@@ -32,7 +32,7 @@ namespace SteadyMedApiGateway.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(new PhysicianViewModel(){ Patients = GatewayController.GetPhysicianPatients(1).Result });
+            return View(new PhysicianViewModel(){ Patients = new GatewayController().GetPhysicianPatients(1).Result });
         }
     }
 }
