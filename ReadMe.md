@@ -21,13 +21,14 @@ This will open a tab on your web browser.
 2. SteadyMedDevice
 ```
 Open .sln file
-Press F5 to open console
-This will open a tab on your web browser containing a Login page.
+Press F5 run the program
+This will open a console window that will simulate the device and output messages
 ```
 3. SteadyMedApiGateway (It's actually the client w/ some API Gateway functionality)
 ```
 Open .sln file
 Press Ctrl + F5
+This will open a tab on your web browser containing a Login page.
 ```
 
 ## How to do the SteadyMed Demo
